@@ -4,8 +4,8 @@ github_url: https://github.com/ucsb-cs16-sp17/ucsb-cs16-sp17.github.io
 on_campus: http://proquest.safaribooksonline.com
 off_campus: http://proquest.safaribooksonline.com.proxy.library.ucsb.edu:2048
 
-start_week: 0
-start_date: 2017-04-03 00:00:00.00-8:00
+start_week: 1
+start_date: 2017-04-02 00:00:00.00-8:00
 num_weeks: 10
 extra_exam_week: true
 
