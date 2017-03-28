@@ -1,0 +1,10 @@
+/Users/diba/.rvm/rubies/ruby-2.1.7/bin/ruby -r ./siteconf20161219-24448-5xq0z.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+installing default libraries
