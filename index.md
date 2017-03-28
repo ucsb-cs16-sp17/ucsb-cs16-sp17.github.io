@@ -1,8 +1,8 @@
 ---
-title: "CS 16: Problem Solving with Computers -I , Winter 17 Mirza"
+title: "CS 16: Problem Solving with Computers -I , Spring 17 Mirza"
 ---
 
-# CS 16: Problem Solving with Computers -I , Winter 17 
+# CS 16: Problem Solving with Computers -I , Spring 17 
 
 <!--{{site.course}}, {{site.quarter}}-->
 
