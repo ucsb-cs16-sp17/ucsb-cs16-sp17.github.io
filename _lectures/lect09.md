@@ -4,8 +4,8 @@ desc: "Passing parameters to functions by value and address, passing arrays to f
 ready: true
 pdfurl: /lectures/CS16_Lecture9.pdf
 annotatedpdfurl: /lectures/CS16_Lecture9_ann.pdf
-annotatedready: true
-lecture_date: 2017-02-09 
+annotatedready: false
+lecture_date: 2017-05-03
 ---
 
 # Topics

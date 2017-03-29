@@ -4,8 +4,8 @@ desc: "Arrays, visualizing program dynamics, and makefile basics "
 ready: true
 pdfurl: /lectures/CS16_Lecture8.pdf
 annotatedpdfurl: /lectures/CS16_Lecture8_ann.pdf
-annotatedready: true
-lecture_date: 2017-02-07 
+annotatedready: false
+lecture_date: 2017-05-01 
 ---
 # Code from lecture
 [https://github.com/ucsb-cs16-wi17/lecture-02-07](https://github.com/ucsb-cs16-wi17/lecture-02-07)
