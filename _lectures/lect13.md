@@ -4,8 +4,8 @@ desc: "More linked lists, Dynamic Arrays, Dynamic memory pitfalls: memory leaks,
 ready: true
 pdfurl: /lectures/CS16_Lecture13.pdf
 annotatedpdfurl: /lectures/CS16_Lecture13_ann.pdf
-annotatedready: true
-lecture_date: 2017-02-23 
+annotatedready: false
+lecture_date: 2017-05-17 
 ---
 
 ## Code from lecture

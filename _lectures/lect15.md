@@ -4,8 +4,8 @@ desc: "Recursion, intro to lab07"
 ready: true
 pdfurl: /lectures/CS16_Lecture15.pdf
 annotatedpdfurl: /lectures/CS16_Lecture15_ann.pdf 
-annotatedready: true
-lecture_date: 2017-03-07 
+annotatedready: false
+lecture_date: 2017-05-31 
 
 ---
 # Code from lecture

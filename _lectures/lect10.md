@@ -4,8 +4,8 @@ desc: "Pointers and structs, references, call by reference"
 ready: true
 pdfurl: /lectures/CS16_Lecture10.pdf
 annotatedpdfurl: /lectures/CS16_Lecture10_ann.pdf
-annotatedready: true
-lecture_date:  2017-02-14 
+annotatedready: false
+lecture_date:  2017-05-08
 ---
 
 # Topics

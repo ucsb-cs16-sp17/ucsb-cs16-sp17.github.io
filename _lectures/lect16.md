@@ -5,7 +5,7 @@ ready: true
 pdfurl: https://c-programming.onlinelearning.utoronto.ca/Strings_and_Files.shtml
 annotatedpdfurl: https://c-programming.onlinelearning.utoronto.ca/Strings_and_Files.shtml
 annotatedready: false
-lecture_date: 2017-03-09 
+lecture_date: 2017-06-05
 ---
 
 # Notes
