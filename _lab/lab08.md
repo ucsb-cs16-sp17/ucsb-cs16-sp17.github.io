@@ -1,10 +1,10 @@
 ---
 layout: lab
 num: lab08
-ready: true
+ready: false
 desc: "Anagrams, palindromes: Strings and recursion"
-assigned: 2017-03-14 23:30:00.00-7
-due: 2017-03-21 23:59:00.00-7
+assigned: 2017-05-29 14:00:00.00-7
+due: 2017-06-06 11:59:00.00-7
 ---
 <div markdown="1">
 
