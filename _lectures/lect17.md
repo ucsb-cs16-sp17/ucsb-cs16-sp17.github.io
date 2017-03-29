@@ -1,6 +1,6 @@
 ---
 num: "lect17"
-desc: "More Strings"
+desc: "Strings"
 ready: true
 pdfurl: /lectures/CS16_Lecture17.pdf
 annotatedpdfurl: /lectures/CS16_Lecture17_ann.pdf
