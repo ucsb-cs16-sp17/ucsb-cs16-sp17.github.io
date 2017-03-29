@@ -1,7 +1,7 @@
 ---
 num: "lect13"
 desc: "More linked lists, Dynamic Arrays, Dynamic memory pitfalls: memory leaks, dangling pointers, segfaults"
-ready: true
+ready: false
 pdfurl: /lectures/CS16_Lecture13.pdf
 annotatedpdfurl: /lectures/CS16_Lecture13_ann.pdf
 annotatedready: false

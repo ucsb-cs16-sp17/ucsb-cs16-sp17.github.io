@@ -1,6 +1,6 @@
 ---
 num: "lect05"
-desc: "Test driven development, more on functions and nested loops, intro to lab02 "
+desc: "Makefiles, intro to lab02 "
 ready: false
 pdfurl: /lectures/CS16_Lecture5.pdf
 annotatedpdfurl: /lectures/CS16_Lecture5_ann.pdf
@@ -17,23 +17,20 @@ We will learn the following concepts by looking at the specific problem of drawi
 
 ## Intro to lab02 - ASCII Art
 
-## Top-down design approach
+## Under the hood of program compilation and execution
+* From high-level programs to machine code
+	* What are .h, .o and .cpp file?
+	* What is an execuatble 
+	* Steps in compilation
+ 	* Creating object files and linking programs with g++
+* Separate compilation with Makefiles
+* Types of compile-time errors. 
+* Linker errors
+* Header guards
 
-* Breaking down the problem 
-* Code design: figuring out what functions you need to implement and the inputs and outputs for each function. This gives us the function declarations!
-* Unit testing
-* Integrating code 
-* Black box testing  (test your entire program with different inputs)
 
-## Test driven development
-
-* Write test code and actual code side by side- so your implementation is always tested
-* Start with function stubs
-* Write the simplest test case and make your code pass that case
-* Write another test case, expect your code to fail, see it fail, then add code to pass that test case (and the previous one).
-* With every new test case, we have to make sure that all our previous tests still pass - this is a great way to make sure that things that were working before are not broken by new code!
-
-## Designing nested loops (see example of drawing the roof)
+## Review: Designing nested loops 
 * When do we need a loop?
 * When do we need a nested loop?
+* Checking for limits
 

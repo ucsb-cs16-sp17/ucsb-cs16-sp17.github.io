@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: "C++ functions and function call mechanics, passing parameters to programs, makefile basics"
+desc: "C++ functions and function call mechanics, passing parameters to programs"
 ready: false
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: /lectures/CS16_Lecture4_ann.pdf
@@ -12,6 +12,7 @@ lecture_date: 2017-04-12
 
 # Topics
 
+## Functions and funtion mechanics
 * Function declaration, definition, and call
 * Formal and actual parameters, return type
 * What happens when we make a function call

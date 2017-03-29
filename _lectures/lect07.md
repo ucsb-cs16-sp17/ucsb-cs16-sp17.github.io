@@ -19,12 +19,7 @@ lecture_date: 2017-04-24
 * What is signed vs unsigned integer representation
 * Signed representation used by moderm computers: two's complement
 * The data type of a variable determines its representation in memory AND the number of bits used to store each variable
-
-
-## How to evaluate C++ expressions
-* Operator precedence
-* Operator associativity
-* Order of evaluation
+* Model of memory
 
 
 

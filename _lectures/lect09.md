@@ -1,7 +1,7 @@
 ---
 num: "lect09"
 desc: "Passing parameters to functions by value and address, passing arrays to functions"
-ready: true
+ready: false
 pdfurl: /lectures/CS16_Lecture9.pdf
 annotatedpdfurl: /lectures/CS16_Lecture9_ann.pdf
 annotatedready: false
@@ -11,7 +11,7 @@ lecture_date: 2017-05-03
 # Topics
 
 ## Code from lecture
-[https://github.com/ucsb-cs16-wi17/lecture-02-09](https://github.com/ucsb-cs16-wi17/lecture-02-09)
+
 
 ## Pointers
 * Pointer declaration - difference/similarities with declaring basic types

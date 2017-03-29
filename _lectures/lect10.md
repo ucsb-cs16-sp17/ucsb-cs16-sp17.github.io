@@ -1,6 +1,6 @@
 ---
 num: "lect10"
-desc: "Pointers and structs, references, call by reference"
+desc: "Pointers and structs, references, call by reference, intro to lab05"
 ready: true
 pdfurl: /lectures/CS16_Lecture10.pdf
 annotatedpdfurl: /lectures/CS16_Lecture10_ann.pdf
@@ -13,6 +13,7 @@ lecture_date:  2017-05-08
 ## Code from lecture
 [https://github.com/ucsb-cs16-wi17/lecture-02-14](https://github.com/ucsb-cs16-wi17/lecture-02-14)
 
+## Intro to lab05
 ## Pointers and structs
 * Declaring structs
 * Different ways of accessing member variables of a structs
@@ -31,10 +32,7 @@ lecture_date:  2017-05-08
 * References as function formal arguments
 * More on the run-time stack
 
-## Separate compilation with Makefiles
-* The C++ prepocessor and purpose of header files
-* Object files
-* The link process
+
 
 
 
