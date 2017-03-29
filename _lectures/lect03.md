@@ -1,6 +1,6 @@
 ---
 num: "lect03"
-desc:  "More control flow, passing parameters to C++ programs"
+desc:  "Nested loops, makefile basics, git command-line, lab01 intro"
 ready: true
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: /lectures/CS16_Lecture3_ann.pdf 
@@ -10,15 +10,14 @@ lecture_date: 2017-04-10
 
 
 # Code from lecture
-[https://github.com/ucsb-cs16-wi17/lecture-01-17](https://github.com/ucsb-cs16-wi17/lecture-01-17)
 
-# Topics
-* Nested and multi-way if-else 
+# Topics 
 * For, while and do-while loops - Discussion on when to use each
-* Nested loops (self-learn)  
+* Nested loops 
+* Intro to lab01
+* Practice with a game of die
 * Passing parameters to programs/main()
-* We will practice both these concepts by playing and coding a game called "Fizzbuzz" in class
-
+* Gentle intro to github command line: cloning a repo to a local machine, syncing repos with git add, commit and push
 
 
 
