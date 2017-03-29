@@ -4,8 +4,8 @@ desc: "C++ variables, data types and simple flow control"
 ready: true
 pdfurl:  /lectures/CS16_Lecture2.pdf
 annotatedpdfurl: /lectures/CS16_Lecture2_ann.pdf
-annotatedready: true
-lecture_date: 2017-01-12 
+annotatedready: false
+lecture_date: 2017-04-05
 ---
 
 # Topics

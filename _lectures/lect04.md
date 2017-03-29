@@ -4,8 +4,8 @@ desc: "File IO "
 ready: true
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: /lectures/CS16_Lecture4_ann.pdf
-annotatedready: true
-lecture_date: 2017-01-19 
+annotatedready: false
+lecture_date: 2017-04-12
 ---
 
 # Code from lecture

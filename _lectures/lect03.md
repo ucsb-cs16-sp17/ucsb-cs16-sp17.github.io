@@ -4,8 +4,8 @@ desc:  "More control flow, passing parameters to C++ programs"
 ready: true
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: /lectures/CS16_Lecture3_ann.pdf 
-annotatedready: true
-lecture_date: 2017-01-17
+annotatedready: false
+lecture_date: 2017-04-10
 ---
 
 
