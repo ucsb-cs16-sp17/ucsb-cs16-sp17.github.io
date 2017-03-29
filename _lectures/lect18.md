@@ -4,7 +4,7 @@ desc: "Final review"
 ready: true
 pdfurl: /lectures/CS16_Lecture18.pdf
 annotatedpdfurl: /lectures/CS16_Lectur18_ann.pdf
-annotatedready: true
+annotatedready: false
 lecture_date: 2017-06-07
 ---
 
