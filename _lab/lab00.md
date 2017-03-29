@@ -23,6 +23,7 @@ For this first lab, you will do the following:
 * [Submit your program for grading.](#step7){: data-ajax="false"}
 * [Check Submission Results](#step8){: data-ajax="false"}
 * [Create a github account and explore its web interface](#step9){: data-ajax="false"}
+* [Perform basic git configurations](#step10)
 
 ## Step 0: Academic Integrity (AI)<a name="step0"></a>
 

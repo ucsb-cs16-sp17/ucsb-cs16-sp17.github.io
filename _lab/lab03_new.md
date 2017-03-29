@@ -32,7 +32,7 @@ By the time you have completed this lab, you should be able to:
 * [Reading from input files and counting ducks](#step6){: data-ajax="false"}
 * [A more detailed counting program](#step7){: data-ajax="false"}
 * [Turn in your code ](#step8){: data-ajax="false"}
-
+* [Preparing for lab02: Git one-time configurations and basic work flow](#gitonetime){: data-ajax="false"}
 
 ## Step 1: Log on to CSIL and bring up a terminal window. <a name="step1"></a>
 

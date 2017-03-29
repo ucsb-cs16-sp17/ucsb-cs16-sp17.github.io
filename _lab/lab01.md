@@ -1,444 +1,327 @@
 ---
 layout: lab
-num: lab01
-ready: false 
-desc: "Counting ducks: Simple I/O and flow control, github command-line setup"
+num: lab01	
+ready: false
+desc: "Crunching numbers: Loops and functions, github command-line  "
 assigned: 2017-04-11 09:00:00.00-7
 due: 2017-04-18 11:59:00.00-7
 ---
 
+<div markdown="1">
 
-# Introduction
+## Introduction
 
-By the time you have completed this lab, you should be able to:
+The assignment for this week will utilize concepts of control flow that we covered in class. You may utilize other concepts of programming as well, as you see fit. In the last assignment we used github's web interface. In this section we will learn about github's command-line tools which allow you to perform version control in a terminal. To complete the lab follow these steps in order:
 
-* Use for loops to count up and count down
-* Check command line argument for input filename, and open that input file for reading
-* Read every line of text in an input file and process it, using a while loop
-* Use if-else statements to select blocks of code
-* Count how many times a value occurs in a file
-* Use Unix commands to create directories, navigate to directories, list files, and copy files
-* Use the "make" command to compile simple stand-alone C++ programs (i.e. single source code file)
-* Run simple C++ programs both with and without a single command line parameter
+* [Creating and cloning your repo](#clonerepo){: data-ajax="false"}
+* [Getting the starter code from a local directory into your local git directory](#getstarter){: data-ajax="false"}
+* [Using the git command line tools to save the first version of your code](#firstcommit){: data-ajax="false"}
+* [Solving the problems for this lab](#programs){: data-ajax="false"}
+* [Submit your code](#submit){: data-ajax="false"}
+* [Check submission results](#checksubmission){: data-ajax="false"}
 
-# Step by Step Instructions 
 
-* [Log on to CSIL and bring up a terminal window](#step1){: data-ajax="false"}
-* [Create your working directory](#step2){: data-ajax="false"}
-* [Getting the starter code from a local directory](#step3){: data-ajax="false"}
-* [Compiling and running the first program for this assignment](#step4){: data-ajax="false"}
-* [Copy sample01.cpp to myProg01.cpp and make changes](#step5){: data-ajax="false"}
-* [Reading from input files and counting ducks](#step6){: data-ajax="false"}
-* [A more detailed counting program](#step7){: data-ajax="false"}
-* [Turn in your code ](#step8){: data-ajax="false"}
-* [Preparing for lab02: Git one-time configurations and basic work flow](#gitonetime){: data-ajax="false"}
 
-## Step 1: Log on to CSIL and bring up a terminal window. <a name="step1"></a>
+## Step 1: Creating and cloning your repo  <a name="clonerepo"></a>
 
-*Note: This assignment MUST be done individually. This is a correction to what was announced in lecture*
 
-I hope I can safely assume that you have all gotten a CoE account.
- If your account is not working,  get the attention of the instructor.
+You are not expected to finish the entire lab in one sitting. Please don't rush through it and read all instructions carefully. We encourage you to work in pairs for this lab. Please sit with your pair partner on the same terminal. Decide who will be the 'driver' and who will be the 'navigator'. If you don't know what those terms mean, be sure to see the following video on pair programming:
 
-Log into your account to make sure it works. 
-As a reminder to get to the terminal go to <strong>Application</strong> Menu, then <strong>System Tools</strong>, then <strong>Terminal Window</strong>.
+[http://bit.ly/pair-programming-video](http://bit.ly/pair-programming-video)
 
-In the steps below, and in most future labs, you will create files on your own
-account.
- 
-## Step 2: Create your working directory <a name="step2"></a>
+Log into your CoE account on CSIL and open a terminal. This lab assumes that you have completed the following steps from the previous lab:
 
-In lab00,  we created your <code>~/cs16</code> directory, and the <code>~/cs16/lab00</code> directory.
+(1) Have a high-level understanding of what git and github are all about. If you need a refresher, read this article: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/). Refer lab00.
 
-In this lab, we'll create the <code>~/cs16/lab01</code> directory.
+(2) Created a github account and have successfully uploaded a file (hello.cpp) in a git repo under our class organization. This verifies that you are part of our class organization. Refer to lab00 for more on this. 
 
-You can do this with the following unix command:
 
-<syntaxhighlight lang="bash">mkdir ~/cs16/lab01</syntaxhighlight>
+In the next steps you will integrate github's command line tools into your workflow:
 
-Then you can use a <code>cd</code> command to go directly into that directory:
-
-<syntaxhighlight lang="bash">cd ~/cs16/lab01</syntaxhighlight>
-
-You can then use the <code>pwd</code> command to make sure that you are in the proper
-spot. The result should look like this (except in place of /cs/faculty/dimirza, you'll see your own home directory listed, e.g. /cs/student/jsmith).
-
-```
--bash-4.2$ mkdir ~/cs16/lab01
--bash-4.2$ cd ~/cs16/lab01
--bash-4.2$ pwd
-/cs/faculty/dimirza/cs16/lab01
--bash-4.2$
-```
-
-In future weeks, we may simply say something like &quot;create a <code>~/cs16/lab01</code> directory and make it your current directory&quot;, without spelling out the Linux commands to do this.  You can always refer back to previous labs if you forget the details, but eventually you'll want to memorize some of the most useful commands such as <code>mkdir</code>, <code>cd</code>, <code>pwd</code> and <code>ls</code>.
-
-## Step 3: Getting the starter code from a local directory <a name="step3"></a>
-
-
-Copy the code from the instructor's account on the CSIL server using the following command:
-
-```
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab01-startercode/*  ~/cs16/lab01/
-```
-
-After doing this command, if you cd into ~/cs16/lab01/ and use the ls command, you should see several .cpp files:
-
-```
--bash-4.2$ ls
-animals01.txt  animals02.txt  countDucks.cpp  sample01.cpp
--bash-4.2$ 
-```
-
-If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask for assistance. 
-
-If so, you are ready to move on to the next step. 
-
-## Step 4: Compiling and running the first program for this assignment <a name="step4"></a>
-
-The first program we are going to compile and run is one that demonstrates a for loop in C++.   
-
-In your lab01 directory, you should have a program called sample01.cpp that we copied in the previous step.   Here's how you can put yourself in that directory (though you should already be there):
-
-```
--bash-4.2$ cd ~/cs16/lab01/
--bash-4.2$ pwd
-/cs/faculty/dimirza/cs16/lab01/
--bash-4.2$ 
-```
-
-Then you can list out your files with the <code>ls</code> command:
-
-```
--bash-4.2$ ls
-animals01.txt  animals02.txt  countDucks.cpp  sample01.cpp
--bash-4.2$ 
-```
-
-Finally, use the Unix <code>cat</code> command to list the contents of the file sample01.cpp.  (The reason this command is called "cat" has nothing to do with the animal that goes "meow".  If you ask me in lecture and I'll tell you where the name comes from.)
-
-```
--bash-4.2$ cat sample01.cpp
-// sample01.cpp
-// by P. Conrad for CS16, Winter 2017
-#include <iostream>
-using namespace std;
-
-int main() {
-    // Simple for loop that counts from 1 up to n
-
-    int n=5;
-
-    for (int i=1; i<=n; i++) {
-       cout << "i=" << i << endl;
-    }
-   
-    return 0;
-}
--bash-4.2$ 
-```
-
-Compile this with the command <code>make sample01</code> and run it with the command <code>./sample01</code>.  That looks like this:
-
-```
--bash-4.2$ make sample01
-g++     sample01.cpp   -o sample01
--bash-4.2$ ./sample01 
-i=1
-i=2
-i=3
-i=4
-i=5
--bash-4.2$ 
-```
-
-
-If you get that output, you are ready for the next step. 
-
-
-## Step 5: Copy sample01.cpp to myProg01.cpp and make changes <a name="step5"></a>
-
-Now we'll use the the Unix command <code>cp </code><em>oldfile newfile</em> which copies files, to copy from sample01.cpp to a new file called myProg01.cpp, as shown here:
-
-```
--bash-4.2$ cp sample01.cpp myProg01.cpp
--bash-4.2$ ls
-animals01.txt  countDucks.cpp  sample01
-animals02.txt  myProg01.cpp    sample01.cpp
--bash-4.2$ 
-```
-
-Now you have a new file called myProg01.cpp that is a copy of sample01.cpp.   Open it up in a text editor and make the following changes:
-
-1. Change the comment at the top of the file so that it says // myProg01.cpp
-2. Change the second line of the file to be of the format "Author: your name"
-3. Change the comment within the code to "Simple that counts down from n to 1"
-
-4. Change the for loop as follows:
-
-  * Instead of initializing to 1, initialize to n
-  * Instead of testing <code>i&lt;=n</code>, test whether <code>i&gt;0</code>
-  * Instead of changing i by incrementing with <code>i++</code>, change it by decrementing with <code>i--</code>
-  * Remove the printing of "i=" each time.  Instead just print the number.  And Instead of printing a newline after each number, just print one space.  We do that by changing <code>cout &lt;&lt; "i=" &lt;&lt; i &lt;&lt; endl;</code> to <code> cout &lt;&lt; i &lt;&lt; " ";</code>
-  * Add a line that prints a newline at the very end, just after the for loop is over, but BEFORE the <code>return 0;</code> statement. *Note: As a reminder, you get out of vim or gvim with ESC:x or ESC:wq . You can get out of emacs with CTRL/X followed by CTRL/C.  It will ask if you want to save changes; type y for yes.*
-
-Compile and run myProg01.cpp with these changes. The output should look like this:
-
-<pre>
-5 4 3 2 1
-</pre>
-
-
-You are now ready to move to the next step.   
-
-
-Tip: *If you make a mistake that results in an "infinite loop", i.e. the window is just scrolling by without stopping, you can use CTRL/C (hold down Control and type C) to stop the program.*
-
-
-## Step 6: Reading from input files and counting ducks <a name="step6"></a>
-The next files we are going to look at are not C++ code, but rather data files.
-
-Use the "cat" command to look at the contents of animals01.txt and animals02.txt. You should get results like these:
-
-```
--bash-4.2$ cat animals01.txt 
-duck
-duck
-goose
--bash-4.2$ cat animals02.txt
-duck
-duck
-goose
-duck
-duck
-cow
-duck
-duck
-dog
--bash-4.2$ 
-```
-
-The next program we are going to look at will read input from files such as these.    It is called <code>countDucks.cpp</code> and it will simply count the number of ducks in each file.
-
-Before you look at the code, try compiling the program and running it, because this will help you understand what the program is trying to do.  Compile with:
-
-```
--bash-4.2$ make countDucks
-g++     countDucks.cpp   -o countDucks
--bash-4.2$ 
-```
-
-Then try running it with just <code>./countDucks</code>.  You'll see that you get a "Usage" message.  This is telling us that the program expects a "command line argument", which is the name of the file to read:
-
-```
--bash-4.2$ ./countDucks 
-Usage: ./countDucks inputFile
--bash-4.2$ 
-```
-
-So run it again, the first time giving it animals01.txt as the filename, and the second time giving it animals02.txt as the filename:
-
-```
--bash-4.2$ ./countDucks animals01.txt 
-There were 2 ducks in animals01.txt
--bash-4.2$ ./countDucks animals02.txt 
-There were 6 ducks in animals02.txt
--bash-4.2$ 
-```
-
-This code for countDucks.cpp is longer than what will fit on a single screen, so instead of using the "cat" program to list it on our terminal, I suggest opening it up in a editor to look at it.  To open with emacs, this would be <code> emacs countDucks.cpp</code>. To open with gvim type: <code> gvim countDucks.cpp</code>
-
-
-Read through the code, especially the comments, and try to understand what each line of code is doing.  We'll explain more about this code in lecture, but for now at least get the big picture of how the code works.
-
-Once you've done that, you are ready for the next step.
-
-## Step 7: A more detailed counting program <a name="step7"></a>
-
-Your job is now to copy countDucks.cpp to a file myProg02.cpp and make some changes.
-
-First, let's stipulate that you may assume that everything in the input file is an animal, one per line&mdash;if someone adds "potato" or "bicycle" to the file, you can just assume that potato and bicycle are now to be considered types of animals.
-
-1. Add a variable that will count ALL animals in the file.    Give it an appropriate name and initialize it to zero. 
-2. Add a variable that will count ALL animals in the file that are NOT ducks.   Give it an appropriate name and initialize it to zero. 
-3. Add code that will increment those counts when appropriate.  It may help to know that C++ has an else clause for an if that looks like this:
-
-```
-   if (condition) {
-     // lines of code here are 
-     // executed when condition is true
-   } else {
-     // lines of code here are
-     // executed when condition is false
-   }
-``` 
-
-Note that it is NOT required for every if to have an else clause.
-
-Also note that the braces <code>{ } </code> are:
-
-* OPTIONAL when there is a SINGLE statement inside a particular if or else block
-* REQUIRED when there is more than one statement inside a particular if or else block
-
-After making these changes, one more thing: change the lines that give the output so they look like the ones shown below.
-
-
-<pre>
-Report for animals01.txt:
-   Animal count:    3
-   Duck count:      2
-   Non duck count:  1
-</pre>
-
-<pre>
-Report for animals02.txt:
-   Animal count:    9
-   Duck count:      6
-   Non duck count:  3
-</pre>
-
-It is IMPORTANT to be EXACT since the submit.cs system will compare your output with the expected output character-by-character.   The spacing MATTERS!   You can add extra spaces at the beginning and end of the string literals for <code>"   Animal count:   "</code>  and <code>"   Duck count:   "</code> so that the spacing comes out right and matches the expected output below.  I'm not going to tell you how many; you'll have to figure that out.
-
-Note that we will also test your program on other input files, so you should too.  Use the cp command to copy animals02.txt to animals03.txt and add some ducks and some other animals.  Count by hand, and make sure that the count when you run your program matches what is expected.
-
-When you are satisfied that the count is correct and that format of the output is precise, you are ready to submit your code for grading.
-
-Note that the submit.cs system may give you feedback on whether your code is correct or not.    You can use this feedback to resubmit as many times as you need up until the deadline for the assignment.  So if it doesn't work on the first try, don't panic&mdash;just fix your code.
-
-
-## Step 8: Turn in your code  <a name="step8"></a>
-
-Once you have joined the course, you should be able to submit your code by typing the sequence of commands shown below in a terminal window on CSIL:
-
-* Navigate to your ~/cs16/lab01 directory, the one containing your code for this week's lab.
-<pre>
--bash-4.2$ cd ~/cs16/lab01
-</pre>
-
-* Use the <code>ls</code> command to list your files and to be sure that you have the myProg01.cpp and myProg02.cpp files in your directory.  It is ok if there are other files (countDucks.cpp, animals01.txt, etc.) along with the executables.  You only have to submit myProg01.cpp and myProg02.cpp.
-
-```
--bash-4.2$ cd ~/cs16/lab01
--bash-4.2$ ls
-animals01.txt  countDucks.cpp  myProg02      sample01
-animals02.txt  myProg01.cpp    myProg02.cpp  sample01.cpp
--bash-4.2$ 
-```
-
-* Use the following command to turn in your files:
-<pre>
--bash-4.2$ ~submit/submit -p 627 myProg01.cpp myProg02.cpp
-</pre>
-
-The number 627 is the "project number" specfic to CS16 W17 lab01 for our class section.
-
-### What a successful turnin looks like 
-
-```
-[dimirza@csil-02 lab01]$ pwd
-/cs/faculty/dimirza/cs16/lab01
-[dimirza@csil-02 lab01]$ ls
-animals01.txt  countDucks      myProg01      myProg02      README.md
-animals02.txt  countDucks.cpp  myProg01.cpp  myProg02.cpp  sample01.cpp
-[dimirza@csil-02 lab01]$ ~submit/submit -p 627 myProg01.cpp myProg02.cpp
-logged in as dimirza@cs.ucsb.edu
-Sending myProg01.cpp
-Sending myProg02.cpp
-Submission successful
-Results will be available at: https://submit.cs.ucsb.edu/submission/226377
-[dimirza@csil-02 lab01]$
-```
-
-Once you have done the submit, go to the link shown.  (Yours will have a different number from the one given above.)
-
-### What you'll see on submit.cs if the submission was successful 
-
-If you see the following, it means you passed all the tests.  A successful submission will get 120 points. If you find any thing you want to change, you may resubmit as many times as needed up until the deadline.
-
-<div id="diff_table_div">
-<div class="row-fluid"><div class="pull-left well well-small"><h3 style="color:green">Passed Tests</h3><table border="1">
-  <tr><th>Test Group</th><th>Test Name</th><th>Value</th></tr><tr><td>myProg01</td><td><p style="color:green;margin:0;padding:0;">myProg01</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">./myProg02 animals01.txt</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">./myProg02 animals02.txt</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">myProg02 empty command line</p></td><td>30</td></tr></table></div></div>
-
-</div>
-
-### What you might see if there were errors 
-
-If instead, you see someting like this, it means you didn't pass some tests:
-
-![error](/lab/lab01/submit.cs.error-50pct.png){:height="500px"}
-
-If you are seeing something like that, try to understand the feedback you are getting before asking questions.  Then if you are still stuck, ask for help.  For example, the output above shows that the student forgot the "colon" (<code>:</code>) in the output.
-
-= Evaluation and Grading =
-
-To earn full credit for this lab (120 pts) you should have successfully submitted both myProg01.cpp and myProg02.cpp  via submit.cs and received a "green" indication that it passed all the tests for expected output.
-
-<div id="diff_table_div">
-<div class="row-fluid"><div class="pull-left well well-small"><h3 style="color:green">Passed Tests</h3><table border="1">
-  <tr><th>Test Group</th><th>Test Name</th><th>Value</th></tr><tr><td>myProg01</td><td><p style="color:green;margin:0;padding:0;">myProg01</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">./myProg02 animals01.txt</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">./myProg02 animals02.txt</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">myProg02 empty command line</p></td><td>30</td></tr></table></div></div>
-
-</div>
-
-
-
-* You must check that you have followed these style guidelines: 
-
-1. Indentation is neat, consistent and follows good practice (see below)
-2. Variable name choice: variables should have sensible names.
-	More on indentation: Your code should be indented neatly.  Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way.    Follow the examples from lecture, the sample code, and from the textbook.   
-
-
-* Your submission should be on-time. If you miss the deadline, you are subject to getting a zero
-
-
-Note:
-*Regarding asking for "extensions": Extensions are granted only in TRUE emergencies (i.e. matters of life and death beyond the students control) and require PRIOR APPROVAL of the instructor AS SOON as the circumstances are known.   (Not weeks later "after the fact" approval.)  There must be documentation of some extra-ordinary circumstance beyond the students control (death/hospitalization of an immediate family member requiring emergency travel, hospitalization of student herself/himself), serious illness requiring medical intervention, etc.     Do not ask for extensions because of "heavy work load in my other courses", or other reasons that may  "feel" like an emergency to you, but are in fact, routine for all students.*
-
-
-
-## Preparing for lab02: Git one-time configurations and basic work flow <a name="gitonetime"></a>
-
-In the last assignment we used github's web interface. In this section we will learn about github's command-line tools which allow you to perform version control in a terminal. Software developers almost always prefer to use github's command line tools for version control instead of the web interface. The reason is that with the command-line tools you can (1) use your favorite editor to write your code, instead of github's simple web-based editor (2) compile and test your code, while also performing version control. 
-
-We will see the complete workflow with the git command-line tools in the next assignment. In preparation for that we ask that you complete a few simple one-time configurations as part of this assignment and read some useful articles.
-
- Log into your CoE account and navigate to your cs16 directory. Then do the following steps:
-
-* Step 1: Generate a private/public key pair and upload your public key to github. To do this refer to this tutorial: [https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/](https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/)
-
-* Step 2: Set up your global user.name and user.email values. To do this type in the following commands, but change the name Alex Triton to your own real world first and last name. If you prefer, for privacy reasons, you may use your first name and last initial. Also, change the email address atriton@cs.ucsb.edu to your own @ucsb.edu email address.
+* First you need to perform some one-time configurations: On the CSIL servers open a terminal and navigate to your home directory by typing <code>cd ~</code>. Now in the command line you will set up your global user.name and user.email values. To do this type in the following commands, but change the name Alex Triton to your own real world first and last name. If you prefer, for privacy reasons, you may use your first name and last initial. Also, change the email address atriton@cs.ucsb.edu to your own @ucsb.edu email address.
 
 ```
    git config --global user.name "Alex Triton"
 
    git config --global user.email "atriton@cs.ucsb.edu"
-```
-    
 
-* Read this article on [cloning your first repo](https://ucsb-cs56-pconrad.github.io/topics/git_cloning_your_first_repo/) and another article on [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/). In the next assignment we will use this information to delve into the command-line tools. However, if you would like to continue exploring, try the following optional exercise.
+* Create a new git repo: Open a browser and navigate to our class organization on github: [ucsb-cs16-sp17](https://github.com/orgs/ucsb-cs16-sp17/dashboard). Then go ahead and create a PRIVATE repo containing only a README.md and a .gitignore. To do this click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article. If you are working with a partner, only one of you needs to create the repo. 
 
-*Optional Exercise* 
+**Make sure you follow the right naming convention for your repo. If your github username is jgaucho and your partner's is alily, you should name your repo lab01_alily_jgaucho. Notice that the github usernames are listed in alphabetical order. Also make sure your repo is PRIVATE, so that you code cannot be viewed by your classmates.**
 
-* Make sure you are in your cs16 directory on a CSIL server. You may have to go back to the articles you just read to complete these steps.
+* Add your partner as a collaborator: Read this article on [adding your partner as a collaborator on your github repo](https://ucsb-cs56-pconrad.github.io/topics/github_add_collaborator/). Then follow the steps in the article to add your partner.
 
-1. Open a browser and navigate to our class organization on github, available at this link: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard). As shown in lecture, and in lab00, create a PRIVATE repo, with a readme and a .gitignore in our class organization. If your github username is jgaucho, your repo should be called: lab01_jgaucho
+* Cloning your repo to your ~/cs16/ directory on CSIL: Recall this article that you read in lab01 about [cloning your repo](https://ucsb-cs16.github.io/topics/git_cloning_your_first_repo/). Read it again if you need to. Then, clone the repo that you just created in your ~/cs16/ directory. Suppose the git repo was named lab01_alily_jgaucho, after you clone it, you should see the directory lab01_alily_jgaucho appear under your ~/cs16 directory. `cd` into your git repo directory.
 
-2. Open a terminal on your machine and naviagte to your cs16 directory. At the command prompt try cloning the repo that you just using the ssh address of your repo.  The ssh address can be obtained by navigating to your repo on github in a web-browser, and clicking on the green "Clone or download" button. If your repo name is 'lab00-jgaucho', the ssh address should be: `git@github.com:ucsb-cs16-wi17/lab01_jgaucho`, yours should be something similar. Cloning the repo will create a directory called `lab01_jgaucho` that contains only a README and a .gitignore. 
+You are now ready to get the starter code.
 
-3. Copy all your code from your ~/cs16/lab01/ directory to your local git repo directory. You can do this using the following command, replacing jgaucho with your github username:
+## Step 2: Getting the starter code from a local directory into your local git directory <a name="getstarter"></a>
 
-```
-cp ~/cs16/lab01/* ~/cs16/lab01_jgaucho/
-```
+Copy the code from the instructor's account on the CSIL server into your local git directory. If your local git directory is lab01_alily_jgaucho issue the following command:
 
-4. `cd` into your github lab01 directory (lab01_jgaucho). Compile and run your code. 
+  cp /cs/faculty/dimirza/cs16-wi17/labs/lab01-startercode/* ~/cs16/lab01_alily_jgaucho/
 
-5. Then follow the instructions from the "git basic work flow" article to push your local changes to github. Be sure to use the *git add*, *git commit* and *git push* commands in that sequence as described by the article. Please make sure you read the article. The commands that you have to run are essentially the following:
+
+After doing this command, if you cd into ~/cs16/lab01_alily_jgaucho/ and use the ls command, you should see three .cpp files and a README:
 
 ```
+-bash-4.2$ ls
+min2.cpp  min3v1.cpp  min3v2.cpp README.md
+-bash-4.2$ 
+```
+
+If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance. 
+
+## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
+
+Its now time to use the git-command line tools to perform version control for the files in your git repo. Recall the information in the article [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) that you read in the previous lab. Read it again if you need to. The four essential commands we will be using are:
+
+```
+git pull
 git add .
-git commit -m "Code for lab01"
+git commit -m "Initial version of lab01 files"
 git push origin master
 ```
 
-Once you are done, open a web browser and navigate to your lab01 repo. You should see your code in github!
+Before you proceed, make sure you understand what each of these commands does. Once you are clear about that, go ahead and type them out on a terminal while in your git directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo. 
+
+Note 1: Everytime you add a new piece of logic to your code you should save a snapshot of the latest version of your code by issuing the commands: *git add ...* , *git commit ...* and *git push ...*. All the previous versions will be available to you as well and you have the option of reverting to older versions (We will see how in later labs). As you go through the rest of this lab you will essentially need to use these commands to keep track of the different versions of your code.
+
+Note 2: In this lab you copied the starter code from a local directory on CSIL to your local git repo on the same machine. In the future labs we will look at how to copy the starter code from another git repo! 
+
+Congratulations on integrating git into your workflow! Now proceed to the programming part of this assignment.
+
+
+## Step 4: Solving the problems for this lab<a name="programs"></a>
+
+If you are in a pair, make sure you switch the driver and navigator roles at this point. You must switch roles twice more before the end of the lab.
+This assignment consists of 3 problems, each of which is described below. The first one is worth 20 points each, and the last two are worth 40 points each. Each should be solved in its own file and all three must be submitted for full assignment credit. These exercises are inspired by the ones from the textbook (in Ch. 2 and Ch. 3) - but they are NOT the same, so follow the instructions on THIS sheet carefully. 
+
+You will need to create <b>three files named block.cpp, min4.cpp, and pi.cpp</b>:
+Each corresponds to one of the problems listed below, which make up this lab.
+
+For a reminder on how to open and use a text editor to create and edit new source files, refer back to Lab #0.
+
+For all the subproblems given in this assignment you must compile your code frequently (as you develop it), and test it extensively with as many inputs as you can think of. 
+
+<hr>
+
+### Print a block
+
+In lab01 git directory (e.g. lab01_alily_jgaucho) open a file called `block.cpp` using the same editor you used for the previous labs. In that file, write a program that takes an input from a user for the number of rows and number of columns and prints out a block of characters that is based on these 2 parameters. The program should keep asking the user for input, and printing out the result, until the user enters zero for each of the input parameters.
+
+A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines), for all the different inputs and the output:
+
+<img src="block.png" width="700" alt="block program example" />
+
+Each string printed by the program should include a newline at the end, but no other trailing whitespace (i.e. extra space characters at the end of the line).
+
+
+To compile your code use the g++ command as in lab01 OR the simple make command as in lab01
+
+`$ g++ -std=c++11 -o block block.cpp` 
+
+OR
+
+```
+make block
+```
+
+If you used the first option (g++ ...) note that the -std=c++11 option in these commands is optional to use (that is, not critical to define). All this does is force the compiler to use the latest version of C++.
+
+If you used the second option (make...) note that the make program is clever to compile only block.cpp into the block executable, even though there are other programs (cpp files) in that directory. Note that the C++11 compiler will not be used in the default make tool. But that should be okay for now.
+
+
+<b>If you encounter an error, use the compiler hints and examine the line in question. If the compiler messsage is not sufficient to identify the error, you can search online to see when the error occurs in general.</b>
+
+Run your executable as follows to test it out.
+`$ ./block`
+
+Remember to re-compile the relevant files after you make any changes to the C++ code.
+
+As soon as you have finished one logical piece in your code, let's say you can print a row of 'Xs' instead of the whole block, save a version of your program using git. To do this use the git commands: *git add ...* , *git commit ...* and *git push ...*. 
+
+Specifically you should type the following:
+
+```
+git add block.cpp   OR git add .
+git commit -m "prints a row of Xs or whatever else your program does"
+git push origin master
+```
+
+The first time you run the above commands, navigate to your git repo on github. Click on your commit history, you should see 2 commits - one that has the initial version of the code containing only the provided starter code, another that has your latest changes - that's version control in action - hurray!
+
+Continue to the next part of the assignment. As you add new files and modify code, be sure to integrate the *git add ...* , *git commit ...* and *git push ...* routine into your workflow. 
+
+<hr>
+
+
+### Calculate the approximate value of PI
+
+Write a C++ program that approximates the value of the constant π. Once again you should not resort to using predefind constants and functions for π, that are provided by C++ standard libraries. Instead you should compute the value of π based on the Leibniz formula for π. The formula is given below:
+
+```
+ 1 – 1/3 + 1/5 – 1/7 + 1/9 ...  = pi/4
+```
+
+Put another way, the formula can be written as:
+
+```
+pi = 4 · [ 1 – 1/3 + 1/5 – 1/7 + 1/9 ... + (–1 ^ n)/(2n + 1) ]
+```
+
+The Leibniz formula works well for high values of n.
+
+The program takes an input from the user for the value of n, which determines the number of terms in the approximation of the value of pi. The program then outputs the approximated value of pi as calculated by the Leibniz formula. You must also include a loop that allows the user to repeat this calculation for new values of 'n' until the user says she or he wants to end the program by issuing an input of -1 (or any other negative number). You may assume that the user always inputs an integer. 
+
+The program should print a string of text to the terminal before getting each piece of input from the user. A session should look like the following example (including whitespace and formatting), showing the expected output for different inputs:
+
+```
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+0
+The approximate value of pi using 1 term is: 4.000
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+3
+The approximate value of pi using 4 terms is: 2.895
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+9
+The approximate value of pi using 10 terms is: 3.042
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+49
+The approximate value of pi using 50 terms is: 3.122
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+99
+The approximate value of pi using 100 terms is: 3.132
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+999
+The approximate value of pi using 1000 terms is: 3.141
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+9999
+The approximate value of pi using 10000 terms is: 3.141
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+-1
+```
+Be sure to have a newline after each "Enter the value..." prompt and no other white spaces.
+
+Here is a link that gives the approximated values of pi for up to 1000 terms: [http://www.eveandersson.com/pi/gregory-leibniz](http://www.eveandersson.com/pi/gregory-leibniz)
+
+In addition, all approximated floating pointer numbers must be displayed to exactly three digits after the decimal point. To do this you should use set the precision for displaying floating point numbers. This is done as follows:
+
+```
+cout.setf(ios::fixed); 	   // Display in fixed point notation. For example, display 1e-1 as 0.1 
+cout.setf(ios::showpoint); // Always display the decimal point.
+cout.precision(3);         // Set the number of digits to display after the decimal point to 3
+```
+
+
+
+<hr>
+
+
+### Calculate the minimum of 4 numbers
+
+In this part of the lab you will write a program that compares 4 input numbers and prints out the smallest one. 
+
+**You should not use the *min()* function in C++ algorithm library or any other outside function that performs the minimum operation for you. Instead, you should base the program on the example programs provided to you that compare fewer inputs.** 
+
+
+Start by examining the given examples, also described below:
+
+<b>min2.cpp</b>
+
+This program takes two command line arguments, and converts them to integers.  It then calls a function, smallest_of_two, that returns the smallest of the two numbers (or the value they share in case of a tie.) It then prints out the result of that function call.
+
+<b>min3v1.cpp</b>
+
+This is the first of two versions of a program that takes min2.cpp one step further, finding the smallest value from among three numbers. Again, if there is a tie, it prints the tie value. Look at the nested if/else statements and see if you can make sense of the logic. Seek help if you don't.
+
+<b>min3v2.cpp</b>
+
+This program does EXACTLY the same thing as min3v1.cpp, but does it with much cleaner, simpler code. Notice how we REUSE the smallest_of_two function to build up a smallest_of_three function. 
+
+Your job in this step is to test min2, min3v1 and min3v2 with many different values and convince yourself that they work properly.
+
+In the next step, you will be taking these programs to the next logical step in this sequence.
+
+<b><i>Your main task</i></b>: Write min4.cpp
+Write a program that works just like min2 and min3v1 and min3v2, except it takes four ints on the command line, and prints the smallest value, handling ties appropriately.
+
+We encourage you to follow the model of min3v2.cpp if you can understand how this works, since your code will be far cleaner than trying to build this out of nested if/else statements.
+
+If you DO use nested if/else statements, though, be sure that you indent and format your code appropriately.
+
+Follow the pattern in min2 and min3v1/min3v2 in terms of all other issues and how they are handled, including the usage message, etc. Your program should look exactly like these except that it works on 4 inputs (note, there are no trailing whitespacse):
+
+<img src="min4.png" width="500" alt="min4 program example" />
+
+To compile your code use the g++ command as before.
+
+`$ g++ -std=c++11 -o min4 min4.cpp`
+
+Run your executable with different inputs to test it out.
+
+<hr>
+
+
+## Step 5: Submit your code<a name="submit"></a>
+
+Once you are satisfied that your programs are correct, it is time to submit them. If you are working in a pair you should do the following steps to join the same group on submit.cs
+
+### Joining the same group
+
+* Navigate to https://submit.cs.ucsb.edu
+* Go to CS16_Mirza_s17
+* Click on the lab page. You will see a blue button named “Join Groups” on top of the page, Click on the button
+* Click on you and your partner’s name. Create group.
+
+
+### Submitting the assignment
+Note: Please remember that you must submit the programs to obtain any credit for the assignment; just completing the programs is not enough.
+
+*Submitting via the web interface*
+
+* Login at https://submit.cs.ucsb.edu, then navigate to “CS16_Mirza_s17” and click on “lab01”. Then click “Make Submission”, and make your submission. Remember to submit all of the .cpp files.
+* Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after a 1 minute delay.
+
+*Submitting via command line*
+
+You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely. 
+
+Submit all the source files to this assignment by running the command:
+`~submit/submit -p 629 block.cpp min4.cpp pi.cpp`
+(629 is from the lab link https://submit.cs.ucsb.edu/p/629/group )
+
+You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
+
+Make sure the latest version of your code is also available on git hub by doing a final *git add ...*, *git commit ...*, *git push ....* routine. Then go to github and check that the latest version of your code is available there.
+
+## Step 6: Check Submission Results<a name="checksubmission"></a>
+
+After the 1 minute delay, the submit system will show your score and give you feedback on your submission. Refresh the webpage after a minute to see this information.
+
+You may submit this lab multiple times. You should submit only after local compilation does not produce any errors and runs as expected. The score of the last submission uploaded before the deadline will be used as your assignment grade.
+
+
+## Step 7: Done!<a name="done"></a>
+
+You are now done with this assignment!
+If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.
+
+If you are logged in remotely, you can log out using the exit command:
+
+`$ exit`
+
+
+## Grading rubric 
+In addition to the points given by submit.cs, our staff will be manually grading your work and giving you points based on the following rubric:
+* (30 pts) Submitting on time, per instructions
+* (40 pts) Code style, including but not limited to:
+1. Code can be easily understood by humans familiar with C++ (including both the author(s) of the code, and non-authors of the code.)
+2. Code is neatly indented and formatted, following standard code indentation practices for C++ as illustrated in either the textbook, or example code given in lectures and labs
+3. Variable names choices are reasonable
+4. Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
+5. Code is not unnecessarily or unreasonably complex when a simpler solution is available
+* (50 pts) Creating a git repo correctly following the prescribed naming convention, adding your partner as a collaborator, pushing the latest version of your code to github, you and your partner joining the same group on submit.cs
+
+</div>
+

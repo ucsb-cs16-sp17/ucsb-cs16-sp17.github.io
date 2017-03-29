@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: "C++ functions and function call mechanics, passing parameters to programs"
+desc: "C++ functions and function call mechanics, passing parameters to programs, makefile basics"
 ready: false
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: /lectures/CS16_Lecture4_ann.pdf
@@ -21,6 +21,7 @@ lecture_date: 2017-04-12
 * Stack!
 * Passing parameters to programs/main()
 * Fizzbuzz command-line
+
 
  
 

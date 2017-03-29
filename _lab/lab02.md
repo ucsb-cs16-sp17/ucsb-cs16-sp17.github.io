@@ -1,306 +1,374 @@
 ---
 layout: lab
-num: lab02	
+num: lab02
 ready: false
-desc: "Crunching numbers: Loops and functions, integrating github into your workflow  "
+desc: "ASCII Art: Logical operators, integrating github into your workflow"
 assigned: 2017-04-18 9:00:00.00-7
 due: 2017-04-25 11:59:00.00-7
 ---
 
-<div markdown="1">
+# Goals for this lab 
+ 
+By the time you have completed this lab, you should be able to
 
-## Introduction
+* Use if/else and for loops to print various kinds of shapes with &quot;ASCII Art&quot;
+* Show that you understand how to work through the basic process of test-driven development in C++
 
-The assignment for this week will utilize concepts of control flow that we covered in class. You may utilize other concepts of programming as well, as you see fit. To complete the lab follow these steps in order:
+Below are the links to different sections of the lab:
 
-* [Creating and cloning your repo](#clonerepo){: data-ajax="false"}
-* [Getting the starter code from a local directory into your local git directory](#getstarter){: data-ajax="false"}
-* [Using the git command line tools to save the first version of your code](#firstcommit){: data-ajax="false"}
-* [Solving the problems for this lab](#programs){: data-ajax="false"}
-* [Submit your code](#submit){: data-ajax="false"}
-* [Check submission results](#checksubmission){: data-ajax="false"}
-
-
-
-## Step 1: Creating and cloning your repo  <a name="clonerepo"></a>
-
-You are not expected to finish the entire lab in one sitting. Please don't rush through it and read all instructions carefully. We encourage you to work in pairs for this lab. Please sit with your pair partner on the same terminal. Decide who will be the 'driver' and who will be the 'navigator'. If you don't know what those terms mean, be sure to see the following video on pair programming:
-
-[http://bit.ly/pair-programming-video](http://bit.ly/pair-programming-video)
-
-Log into your CoE account on CSIL and open a terminal. This lab assumes that you have completed the following steps from lab00 and lab01:
-
-(1) Have a high-level understanding of what git and github are all about. If you need a refresher, read this article: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/). Refer lab00.
-
-(2) Created a github account and have successfully uploaded a file (hello.cpp) in a git repo under the ucsb-cs16-wi17 organization. This verifies that you are part of our class organization. Refer to lab00 for more on this. 
-
-(3) Set-up your CoE account to use github command-line tools. This included a) creating your SSH private/public key and uploading it to github b) performed basic configurations using the *git config* command. Refer lab00.
-
-(4) Read the articles on [creating a github repo under an organization](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/), [cloning your first repo](https://ucsb-cs56-pconrad.github.io/topics/git_cloning_your_first_repo/) and [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/). Refer lab01. We will now put the concepts from all the articles that you have read so far into practice. You may need to refer back to these articles to complete the following steps.
-
-* Creating a new git repo: Open a browser and navigate to our class organization on github: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard). Then go ahead and create a PRIVATE repo containing only a README.md and a .gitignore. To do this click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article. If you are working with a partner, only one of you needs to create the repo. 
-
-**Make sure you follow the right naming convention for your repo. If your github username is jgaucho and your partner's is alily, you should name your repo lab02_alily_jgaucho. Notice that the github usernames are listed in alphabetical order. Also make sure your repo is PRIVATE, so that you code cannot be viewed by your classmates.**
-
-* Adding your partner as a collaborator: Read this article on [adding your partner as a collaborator on your github repo](https://ucsb-cs56-pconrad.github.io/topics/github_add_collaborator/). Then follow the steps in the article to add your partner.
-
-* Cloning your repo to your ~/cs16/ directory on CSIL: Recall this article that you read in lab01 about [cloning your repo](https://ucsb-cs16.github.io/topics/git_cloning_your_first_repo/). Read it again if you need to. Then, clone the repo that you just created in your ~/cs16/ directory. Suppose the git repo was named lab02_alily_jgaucho, after you clone it, you should see the directory llab02_alily_jgaucho appear under your ~/cs16 directory. `cd` into your git repo directory.
-
-You are now ready to get the starter code.
-
-## Step 2: Getting the starter code from a local directory into your local git directory <a name="getstarter"></a>
-
-Copy the code from the instructor's account on the CSIL server into your local git directory. If your local git directory is lab02_alily_jgaucho issue the following command:
-
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/lab02_alily_jgaucho/
+* [Skills Needed ](#skills){: data-ajax="false"}
+* [Ascii Art](#asciiart){: data-ajax="false"}
+* [An example for you to follow: starL](#starL){: data-ajax="false"}
+* [What you'll be doing](#yourgoal){: data-ajax="false"}
+* [Step by Step Instructions](#stepbystep){: data-ajax="false"}
+* [Evaluation and grading](#eval){: data-ajax="false"}
 
 
-After doing this command, if you cd into ~/cs16/lab02_alily_jgaucho/ and use the ls command, you should see three .cpp files and a README:
+
+## Skills Needed <a name="skills"></a>
+
+By now, we expect that you are comfortable with these basic skills from lab00 and lab01 so we will no longer describe them in as much detail as we did previously:
+ 
+* Using a text-editor to create and/or edit C++ programs
+* Creating a git repo on github
+* Cloning your github to your local machine
+* Integrating git command-line tools into your workflow (*git add...*, *git commit..*, *git push ...*)
+* Compiling and running C++ programs
+* Using the computers in both the CSIL and the Phelps labs to do basic things:
+    * Performing basic management of directories and files with Unix commands such as mkdir, cd, pwd, ls, cp, mv
+    * Submitting assignments in this class with the submit.cs system, and checking your results
+
+## What we'll be doing in this lab: ASCII Art <a name="asciiart"></a>
+
+There was a time when laser printers either hadn't been invented yet, or were not yet widely available. Thus, the only kind of printer most folks had access to was something called a &quot;line printer&quot;, which printed only from left to right, top to bottom, and could only print the kinds of characters you find on a typewriter keyboard.
+
+So, you might find folks making pictures like this one, found at http://chris.com/ascii/
+
+ <pre>
+                                 .ze$$e.
+              .ed$$$eee..      .$$$$$$$P""
+           z$$$$$$$$$$$$$$$$$ee$$$$$$"
+        .d$$$$$$$$$$$$$$$$$$$$$$$$$"
+      .$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$e..
+    .$$****""""***$$$$$$$$$$$$$$$$$$$$$$$$$$$be.
+                     ""**$$$$$$$$$$$$$$$$$$$$$$$L
+                       z$$$$$$$$$$$$$$$$$$$$$$$$$
+                     .$$$$$$$$P**$$$$$$$$$$$$$$$$
+                    d$$$$$$$"              4$$$$$
+                  z$$$$$$$$$                $$$P"
+                 d$$$$$$$$$F                $P"
+                 $$$$$$$$$$F 
+                  *$$$$$$$$"
+                    "***""  Gilo94'
+</pre>
+
+For now, we'll be keeping things much simpler: we are going to do some very simple ASCII art of letters, numbers and symbols, in order to practice with if/else and for loops.
+
+The first few exercises will be very simple, but they get progressively more challenging.
+
+## An example for you to follow: starL  <a name="starL"></a>
+
+As an example, we will write a C++ function that returns a C++ string that when printed to cout,  makes the shape of prints the letter L with stars, at any width or height, provided both width and height are &gt;= 2
+
+If either the parameter width or height is less than 2, the function returns an empty string.
+
+The function will have the following <em>function prototype:</em>
+
+<pre>string starL(int width, int height);</pre>
+
+* As a reminder, a function prototype is the first line of the function definition (the header) followed by a semicolon instead of the function body&mdash;it is used to introduce the function to the compiler, in case the function definition isn't coming until later.
+
+* You can read more about function prototypes here: [C++: function prototypes](https://ucsb-cs16.github.io/topics/cpp_function_prototypes/)
+
+The following table shows various calls to this function, along with what the string returned looks like when printed using <code> cout << starL(w,h); </code>
+
+The rule is that the L should have width at least 2, and height at least 2, otherwise the result is an empty string, and printing an empty string results in no output.
+
+![starL](/lab/lab02/starL.png){:height="400px"}
+
+
+So, this is a fairly easy function to write. This will do the job, and is provided for you as an example of how functions like this should be written.
+
+
+To test whether this function works, we can write a simple main that takes the command line arguments, converts them to integers with stoi, 
+and then passes those to the function:
+
+## What you'll be doing <a name="yourgoal"></a>
+
+What you'll be doing in this lab is writing three similar functions: startT, starC and starZ.  
+
+*Sample values returned from starT*
+
+![starT](/lab/lab02/starT.png){:height="400px"}
+
+*Sample values returned from starC*
+
+starC renders the letters C, but requires a minimum width of 2, and a minimum height of 3.  Otherwise it returns an empty string.
+
+![starC](/lab/lab02/starC.png){:height="400px"}
+
+
+*Sample values returned from starZ*
+
+starZ renders the letters Z, but requires a minimum width of 3.   It only takes one parameter, because the height and width are always assumed to be equal.
+
+![starZ](/lab/lab02/starZ.png){:height="400px"}
+
+# Step by Step Instructions <a name="stepbystep"></a>
+
+## Step 1: Getting Started 
+
+* In the previous lab you probably noticed that everytime you pushed your code to git you had to enter your username and password. To avoid this we ask that you use a ssh-key method to establish your identity with git hub.
+The main task is to generate a private/public key and upload your public key to github. To do this refer to this tutorial: [https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/](https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/)
+
+* Decide if you are working alone, or working in a pair.  
+
+If you are working in a pair:
+
+* Go to submit.cs, navigate to CS16, S17, lab02, and create a team for you and your pair partner.   
+* Decide on initial navigator and driver.
+* Driver, log on to driver's CSIL account.
+* Go to our class organization on github: [ucsb-cs16-sp17](https://github.com/orgs/ucsb-cs16-sp17/dashboard) and create a new repo following the naming conventions introduced in previous labs. 
+* Add your partner as a collaborator on the newly created git repo
+* Log on to CSIL, bring up a terminal window, and clone your repo in your ~/cs16/ directory following the instructions from previous labs
+
+## Step 2:  Get the startercode
+
+Copy the code from the instructor's account on the CSIL server into your local git directory.
+
+First, Move to the local git directory:
+
+```
+cd local_git_directory
+(Example: cd lab02_alily_jgaucho) 
+```
+
+Then, Copy the code to the local git directory: (Don't forget the period (.) in the end)
+
+```
+cp /cs/faculty/dimirza/cs16-sp17/labs/lab02-startercode/* .
+```
+
+After executing this command in your local git directory ( ~/cs16/lab02_alily_jgaucho/) . If you use the ls command, you should see the following files:
 
 ```
 -bash-4.2$ ls
-min2.cpp  min3v1.cpp  min3v2.cpp README.md
+backslash.cpp  README.md  starC.cpp  starL.cpp  starT.cpp  starZ.cpp
 -bash-4.2$ 
 ```
 
-If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance. 
-
-## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
-
-Its now time to use the git-command line tools to perform version control for the files in your git repo. Recall the information in the article [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) that you read in the previous lab. Read it again if you need to. The four essential commands we will be using are:
+Save the initial version of your code by typing out the following commands:
 
 ```
-git pull
 git add .
-git commit -m "Initial version of lab02 files"
+git commit -m "Initial version"
 git push origin master
 ```
 
-Before you proceed, make sure you understand what each of these commands does. Once you are clear about that, go ahead and type them out on a terminal while in your git directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo. 
 
-Note 1: Everytime you add a new piece of logic to your code you should save a snapshot of the latest version of your code by issuing the commands: *git add ...* , *git commit ...* and *git push ...*. All the previous versions will be available to you as well and you have the option of reverting to older versions (We will see how in later labs). As you go through the rest of this lab you will essentially need to use these commands to keep track of the different versions of your code.
+## Step 3: Practicing with the starL program 
 
-Note 2: In this lab you copied the starter code from a local directory on CSIL to your local git repo on the same machine. In the future labs we will look at how to copy the starter code from another git repo! 
-
-Congratulations on integrating git into your workflow! Now proceed to the programming part of this assignment.
-
-
-## Step 4: Solving the problems for this lab<a name="programs"></a>
-
-If you are in a pair, make sure you switch the driver and navigator roles at this point. You must switch roles twice more before the end of the lab.
-This assignment consists of 3 problems, each of which is described below. The first one is worth 20 points each, and the last two are worth 40 points each. Each should be solved in its own file and all three must be submitted for full assignment credit. These exercises are inspired by the ones from the textbook (in Ch. 2 and Ch. 3) - but they are NOT the same, so follow the instructions on THIS sheet carefully. 
-
-You will need to create <b>three files named block.cpp, min4.cpp, and pi.cpp</b>:
-Each corresponds to one of the problems listed below, which make up this lab.
-
-For a reminder on how to open and use a text editor to create and edit new source files, refer back to Lab #0.
-
-For all the subproblems given in this assignment you must compile your code frequently (as you develop it), and test it extensively with as many inputs as you can think of. 
-
-<hr>
-
-### Print a block
-
-In lab02 git directory (e.g. lab02_alily_jgaucho) open a file called `block.cpp` using the same editor you used for the previous labs. In that file, write a program that takes an input from a user for the number of rows and number of columns and prints out a block of characters that is based on these 2 parameters. The program should keep asking the user for input, and printing out the result, until the user enters zero for each of the input parameters.
-
-A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines), for all the different inputs and the output:
-
-<img src="block.png" width="700" alt="block program example" />
-
-Each string printed by the program should include a newline at the end, but no other trailing whitespace (i.e. extra space characters at the end of the line).
-
-
-To compile your code use the g++ command as in lab01 OR the simple make command as in lab01
-
-`$ g++ -std=c++11 -o block block.cpp` 
-
-OR
+First compile the starL.cpp file that you have in this week’s directory with the option (-std=c++11 ) as per the following command:
 
 ```
-make block
+g++ -std=c++11 -o starL starL.cpp
 ```
 
-If you used the first option (g++ ...) note that the -std=c++11 option in these commands is optional to use (that is, not critical to define). All this does is force the compiler to use the latest version of C++.
+Run the program with a few command line parameters. You’ll notice something special happens when you pass in the command line parameters -1 -1.
 
-If you used the second option (make...) note that the make program is clever to compile only block.cpp into the block executable, even though there are other programs (cpp files) in that directory. Note that the C++11 compiler will not be used in the default make tool. But that should be okay for now.
+<pre>
+ ./starL 3 4
+ ./starL 4 3
+ ./starL
+ ./starL 2 1
+ ./starL -1 -1
+</pre>
 
+With the command line parameters -1 -1, the program runs a set of tests on itself to make sure that the function starL inside the program is functioning correctly.  So, you should be able to get some feedback on whether your code is correct before you even send it to the submit program.  The code uses stoi to convert the argv[1] and argv[2] to integer values, and compare against -1.
 
-<b>If you encounter an error, use the compiler hints and examine the line in question. If the compiler messsage is not sufficient to identify the error, you can search online to see when the error occurs in general.</b>
+Look over the code and try to understand how it works.  When you feel ready, move on to the next step, and try tackling the starT.cpp, starC.cpp and starZ.cpp programs.
 
-Run your executable as follows to test it out.
-`$ ./block`
+## Step 4: Writing the starT program 
 
-Remember to re-compile the relevant files after you make any changes to the C++ code.
+Your job now is to start edit the starT.cpp program, which has a function inside of it that is a "stub".  That function does NOT produce the correct output---it always just returns the string "stub".   You need to replace that code with a proper implementation of starT.  You can use the implementation of starL in the starL.cpp file as a model.
 
-As soon as you have finished one logical piece in your code, let's say you can print a row of 'Xs' instead of the whole block, save a version of your program using git. To do this use the git commands: *git add ...* , *git commit ...* and *git push ...*. 
-
-Specifically you should type the following:
+Compile your starT.cpp to the execuatable star. Suppose we want your program to draw a T with width 3 and height 2, we will run your starT executable as follows:
 
 ```
-git add block.cpp   OR git add .
-git commit -m "prints a row of Xs or whatever else your program does"
+$./starT 3 2
+```
+
+In general the parameters to the startT program are width, followed by height. You should take this into consideration when writing your main function. To write the starT() function refer back to the description of starT earlier in this lab.   You can also run the program with arguments of -1 -1 to run the internal tests and see whether your implementation is correct.
+
+
+When you think you have a correct implementation, try submitting to the submit.cs system.  You can submit just your starT.cpp program to see how far along you've gotten:
+
+```
+~submit/submit -p 635 starT.cpp 
+```
+
+Note that this will show failures for <code>starC.cpp</code> and <code>starZ.cpp</code>, which are files that you'll be working on at a later step.
+
+You could also just submit the "stubs" for those&mdash;though those will fail some or all of the tests:
+
+```
+~submit/submit -p 635 starC.cpp starT.cpp starZ.cpp
+```
+
+Either way, for now, concentrate only on the test failures that pertain to starT.cpp and try to address any problems you encounter.  If you fix these NOW before moving on to starC.cpp and/or starZ.cpp, you will likely have better success, because what you learn from fixing your mistakes will help you get those other parts solved more quickly and easily.
+
+Some rules to keep in mind for the starT function:
+
+* EVERY line of your T should have exactly the same number of characters, and should end in a newline&mdash;remember to pad out each line with spaces.
+* Return a string that represents the letter T with the correct width and height, but only if height &gt;=2, and width is an odd number &gt;=3
+* if the height and width values are not valid, return an empty string
+
+Hints: recall that:
+
+* the <code>%</code> operator can be used to test where a number is odd or even
+* the <code>&&</code> operator means "and"
+* the <code>||</code> operator means "or"
+* the opposite of &gt;= is &lt;, not &lt;=
+
+Also, for starT.cpp:
+
+* If there are not exactly two command line args after the program name (one for width and one for height), print a usage message: 
+
+```
+Usage: ./starT width height
+```
+
+* If the height and width are both -1, then invoke the internal tests.  Don't change those.  If you do, then you may lose points.
+
+
+Save the new version of your code with the starT implementation by typing out the following commands:
+
+```
+git add starT.cpp
+git commit -m "Implemented starT()"
 git push origin master
 ```
 
-The first time you run the above commands, navigate to your git repo on github. Click on your commit history, you should see 2 commits - one that has the initial version of the code containing only the provided starter code, another that has your latest changes - that's version control in action - hurray!
+## Step 5: Writing the starC program 
 
-Continue to the next part of the assignment. As you add new files and modify code, be sure to integrate the *git add ...* , *git commit ...* and *git push ...* routine into your workflow. 
+Next, write the starC program.   Follow the same basic procedure as for the starT.cpp program.
 
-<hr>
+To get started, look at the table near the top of this lab that shows correct output for the starC program, as well as looking at the test cases in the runTests() function of the starC.cpp file in your directory.
 
-### Calculate the minimum of 4 numbers
+Note that you'll need to add some code to the main, but this time the rules are different.   The minimum width is 2, and the minimum height is 3&mdash;everything else returns a null string (except for the values -1 for width and -1 for height&mdash;when passed in combination, the tests should be run.)
 
-In this part of the lab you will write a program that compares 4 input numbers and prints out the smallest one. 
+When:
 
-**You should not use the *min()* function in C++ algorithm library or any other outside function that performs the minimum operation for you. Instead, you should base the program on the example programs provided to you that compare fewer inputs.** 
+* You can run your code with: <code>./starC -1 -1</code> and all the tests pass
+* You can run your code on values such as <code>./starC 4 5</code> and <code>./starC 5 4 </code> and see the same output as what is shown in the table, AND
+* When typing in a command line that doesn't have exactly two arguments after <code>./starC</code> produces the correct error message
 
+then, you are ready to try testing your code on the submit system.
 
-Start by examining the given examples, also described below:
-
-<b>min2.cpp</b>
-
-This program takes two command line arguments, and converts them to integers.  It then calls a function, smallest_of_two, that returns the smallest of the two numbers (or the value they share in case of a tie.) It then prints out the result of that function call.
-
-<b>min3v1.cpp</b>
-
-This is the first of two versions of a program that takes min2.cpp one step further, finding the smallest value from among three numbers. Again, if there is a tie, it prints the tie value. Look at the nested if/else statements and see if you can make sense of the logic. Seek help if you don't.
-
-<b>min3v2.cpp</b>
-
-This program does EXACTLY the same thing as min3v1.cpp, but does it with much cleaner, simpler code. Notice how we REUSE the smallest_of_two function to build up a smallest_of_three function. 
-
-Your job in this step is to test min2, min3v1 and min3v2 with many different values and convince yourself that they work properly.
-
-In the next step, you will be taking these programs to the next logical step in this sequence.
-
-<b><i>Your main task</i></b>: Write min4.cpp
-Write a program that works just like min2 and min3v1 and min3v2, except it takes four ints on the command line, and prints the smallest value, handling ties appropriately.
-
-We encourage you to follow the model of min3v2.cpp if you can understand how this works, since your code will be far cleaner than trying to build this out of nested if/else statements.
-
-If you DO use nested if/else statements, though, be sure that you indent and format your code appropriately.
-
-Follow the pattern in min2 and min3v1/min3v2 in terms of all other issues and how they are handled, including the usage message, etc. Your program should look exactly like these except that it works on 4 inputs (note, there are no trailing whitespacse):
-
-<img src="min4.png" width="500" alt="min4 program example" />
-
-To compile your code use the g++ command as before.
-
-`$ g++ -std=c++11 -o min4 min4.cpp`
-
-Run your executable with different inputs to test it out.
-
-<hr>
-
-### Calculate the approximate value of PI
-
-Write a C++ program that approximates the value of the constant π. Once again you should not resort to using predefind constants and functions for π, that are provided by C++ standard libraries. Instead you should compute the value of π based on the Leibniz formula for π. The formula is given below:
+If you submit starC.cpp together with your starT.cpp program, your submit command will look like this:
 
 ```
- 1 – 1/3 + 1/5 – 1/7 + 1/9 ...  = pi/4
+~submit/submit -p 635 starC.cpp starT.cpp 
 ```
 
-Put another way, the formula can be written as:
+(The order of the files doesn't matter&mdash;list starT.cpp first, or starC.cpp first, aand either way, the result is the same.)
+
+Note that failures for <code>starZ.cpp</code> may still show up, but we need not be concerned about those yet.  
+
+Concentrate only on the test failures that pertain to starC.cpp and starT.cpp and try to address any problems you encounter.  Once all of those pass, move on to the starZ.cpp program:
+
+Save the new version of your code with the starT and starC implementation by typing out the following commands:
 
 ```
-pi = 4 · [ 1 – 1/3 + 1/5 – 1/7 + 1/9 ... + (–1 ^ n)/(2n + 1) ]
-```
-
-The Leibniz formula works well for high values of n.
-
-The program takes an input from the user for the value of n, which determines the number of terms in the approximation of the value of pi. The program then outputs the approximated value of pi as calculated by the Leibniz formula. You must also include a loop that allows the user to repeat this calculation for new values of 'n' until the user says she or he wants to end the program by issuing an input of -1 (or any other negative number). You may assume that the user always inputs an integer. 
-
-The program should print a string of text to the terminal before getting each piece of input from the user. A session should look like the following example (including whitespace and formatting), showing the expected output for different inputs:
-
-```
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
-0
-The approximate value of pi using 1 term is: 4.000
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
-3
-The approximate value of pi using 4 terms is: 2.895
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
-9
-The approximate value of pi using 10 terms is: 3.042
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
-49
-The approximate value of pi using 50 terms is: 3.122
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
-99
-The approximate value of pi using 100 terms is: 3.132
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
-999
-The approximate value of pi using 1000 terms is: 3.141
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
-9999
-The approximate value of pi using 10000 terms is: 3.141
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
--1
-```
-Be sure to have a newline after each "Enter the value..." prompt and no other white spaces.
-
-Here is a link that gives the approximated values of pi for up to 1000 terms: [http://www.eveandersson.com/pi/gregory-leibniz](http://www.eveandersson.com/pi/gregory-leibniz)
-
-In addition, all approximated floating pointer numbers must be displayed to exactly three digits after the decimal point. To do this you should use set the precision for displaying floating point numbers. This is done as follows:
-
-```
-cout.setf(ios::fixed); 	   // Display in fixed point notation. For example, display 1e-1 as 0.1 
-cout.setf(ios::showpoint); // Always display the decimal point.
-cout.precision(3);         // Set the number of digits to display after the decimal point to 3
+git add starC.cpp
+git commit -m "Implemented starC()"
+git push origin master
 ```
 
 
 
-<hr>
+## Step 6: Writing the starZ program 
+
+For the starZ.cpp program, we have these rules:
+
+* Take only one command line parameter: the width. The height will automatically be set equal to the width.
+
+The starZ function follows these rules:
+
+* return a string that draws  the letter Z with the correct width and height, but only if width &gt;=3 
+* return an empty string if the value passed in for width is not valid, print nothing at all.
+
+Hints for the middle part of the Z:
+
+* Take a look at the program backslash.cpp which is in your directory.   Try compiling and running it.  Look at the source code and see if there are any hints there.
+* As you can see, it produces a backslash.cpp produces a backslash of a given width, as shown here.   Look at the source code, and consider how you might turn backslash.c into forwardslash.c&mdash;in fact, that might be a good warm-up exercise for making the starZ.c program.     Note that the backslash.cpp program does not contain an internal test harness.
+* Note that the backslash.cpp program uses several "helper functions".  You might find that to be a useful technique in writing your own code.   You may introduce whatever helper functions would be useful to you.
+
+```
+-bash-4.1$  ./backslash
+Usage: ./backslash width
+-bash-4.1$ ./backslash 3
+*
+ *
+  *
+-bash-4.1$ ./backslash 5
+*
+ *
+  *
+   *
+    *
+-bash-4.1$ ./backslash 2
+*
+ *
+-bash-4.1$ ./backslash 4
+*
+ *
+  *
+   *
+-bash-4.1$ 
+```
 
 
-## Step 5: Submit your code<a name="submit"></a>
+As with starC.cpp, you should add code to starZ.cpp so that you are able to invoke the internal tests by typing <code>./starZ -1 </code>.  Note that this time, there is only one parameter.
 
-Once you are satisfied that your programs are correct, it is time to submit them. If you are working in a pair you should do the following steps to join the same group on submit.cs
+And, if there is not exactly one parameter, there should be an appropriate "usage" message that follows the pattern of the other programs&mdash;except that there is only a width parameter in this program.
 
-### Joining the same group
+When you have a version that can pass its internal tests, try submitting it along with your starT.cpp and starC.cpp to the submit.cs system.  
 
-* Navigate to https://submit.cs.ucsb.edu
-* Go to CS16_Mirza_w17
-* Click on the lab page. You will see a blue button named “Join Groups” on top of the page, Click on the button
-* Click on you and your partner’s name. Create group.
+```
+~submit/submit -p 635 starC.cpp starT.cpp starZ.cpp
+```
 
+If there are errors reported, fix them.    
 
-### Submitting the assignment
-Note: Please remember that you must submit the programs to obtain any credit for the assignment; just completing the programs is not enough.
+When you have a clean build, you are nearly done with this lab.   I say "nearly" done, because you should take one last look over the grading rubric to see if there is anything you need to adjust before doing your final submit and calling it a day.
 
-*Submitting via the web interface*
+Note:
+You MUST make one final submission that includes ALL of your files.  For getting incremental feedback while working on the lab, it is fine to submit one at a time, but for GRADING purposes, your LAST submission (in time) must be a complete submission of EVERYTHING.   In the ideal case (for you), that submission is completely "green", i.e. all test cases pass, and you have a perfect score (at least from the standpoint of the points you are awarded for passing the test cases.)
 
-* Login at https://submit.cs.ucsb.edu, then navigate to “CS16_Mirza_w16” and click on “lab01”. Then click “Make Submission”, and make your submission. Remember to submit all of the .cpp files.
-* Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after a 1 minute delay.
+If there are parts you can't figure out, be sure to submit all of your files anyway to maximize the number of points you receive based on the parts that '''are''' working.
 
-*Submitting via command line*
+Make sure you do a final *git add ..*, *git commit ...* and *git push ..* to make sure the latest version of your code is available on github.
 
-You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely. 
+# Evaluation and Grading <a name="eval"></a>
+ 
+Mechanics:
 
-Submit all the source files to this assignment by running the command:
-`~submit/submit -p 629 block.cpp min4.cpp pi.cpp`
-(629 is from the lab link https://submit.cs.ucsb.edu/p/629/group )
-
-You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
-
-Make sure the latest version of your code is also available on git hub by doing a final *git add ...*, *git commit ...*, *git push ....* routine. Then go to github and check that the latest version of your code is available there.
-
-## Step 6: Check Submission Results<a name="checksubmission"></a>
-
-After the 1 minute delay, the submit system will show your score and give you feedback on your submission. Refresh the webpage after a minute to see this information.
-
-You may submit this lab multiple times. You should submit only after local compilation does not produce any errors and runs as expected. The score of the last submission uploaded before the deadline will be used as your assignment grade.
+* (30 pts) submitting starT.cpp, starC.cpp and starZ.cpp to the submit system (10 points each)
+* (30 pts) submission is on time and follows instructions 
+* (30 pts) starT.cpp, starC.cpp and starZ.cpp files submitted  have good header comments 
 
 
-## Step 7: Done!<a name="done"></a>
+Correctness
 
-You are now done with this assignment!
-If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.
+* (150 pts) 15 tests, ten points each, executed by submit.cs system
 
-If you are logged in remotely, you can log out using the exit command:
+Style: Style points will be provided based on your github submission, so make sure you have one
 
-`$ exit`
+* (10 pts) Correct creation of the lab02 github repo in our class organization following the naming conventions provided in the lab. Addig your partner as collaborator and partner accepting the invitation. Both partners joining the same group on submit.cs
 
-</div>
+* (30 pts) All three programs have good programming style, including proper use of indentation, reasonable choices for variable names, readable code, reasonable use of whitespace, and other good programming practices. You must have good header comments as illustrated in the coding examples done in class. First line should be the name of your file, followed by date of creation, author and a brief description of the program. You must use curly braces in the body of all control structures (if-else, for and while) even if they contain a single statement. You should not mix tabs and spaces when indenting your code
+
+Refer back to the feedback provided by the teaching staff on your lab02 code on github.
+
 
