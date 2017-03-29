@@ -44,6 +44,7 @@ In the next steps you will integrate github's command line tools into your workf
    git config --global user.name "Alex Triton"
 
    git config --global user.email "atriton@cs.ucsb.edu"
+```
 
 * Create a new git repo: Open a browser and navigate to our class organization on github: [ucsb-cs16-sp17](https://github.com/orgs/ucsb-cs16-sp17/dashboard). Then go ahead and create a PRIVATE repo containing only a README.md and a .gitignore. To do this click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article. If you are working with a partner, only one of you needs to create the repo. 
 
