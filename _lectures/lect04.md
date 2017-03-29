@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: "File IO "
+desc: "Function call mechanics, passing parameters to programs, evaluating C++ expressions "
 ready: true
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: /lectures/CS16_Lecture4_ann.pdf
@@ -13,6 +13,7 @@ lecture_date: 2017-04-12
 
 # Topics
 
+* Passing parameters to programs/main()
 ## File I/O basics
 * Examining text files using 1) an editor 2) cat command 
 * Opening a file: open()

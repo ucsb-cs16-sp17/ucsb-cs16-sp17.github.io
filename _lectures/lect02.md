@@ -27,11 +27,8 @@ lecture_date: 2017-04-05
 * Creating a github repo and using github's web interface to store your first program
 
 
-* Basic abstraction in software: functions
-* C++ functions are different from Python functions
 
 
 
 
 
-We will learn all the above concepts by writing, compiling and executing an example program in C++
