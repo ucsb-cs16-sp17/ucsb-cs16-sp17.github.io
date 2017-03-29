@@ -3,7 +3,7 @@ layout: lab
 num: lab03
 ready: false
 desc: "ASCII Art: Logical operators"
-assigned: 2017-04-24 14:00:00.00-7
+assigned: 2017-04-25 09:00:00.00-7
 due: 2017-05-02 11:59:00.00-7
 ---
 
