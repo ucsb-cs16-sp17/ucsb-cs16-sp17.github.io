@@ -1,10 +1,10 @@
 ---
 layout: lab
 num: lab03
-ready: true
+ready: false
 desc: "ASCII Art: Logical operators"
-assigned: 2017-01-28 21:30:00.00-8
-due: 2017-02-03 23:59:00.00-8
+assigned: 2017-04-24 21:30:00.00-7
+due: 2017-05-02 11:59:00.00-7
 ---
 
 # Goals for this lab 

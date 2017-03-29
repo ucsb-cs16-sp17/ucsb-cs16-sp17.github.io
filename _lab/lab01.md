@@ -4,7 +4,7 @@ num: lab01
 ready: false 
 desc: "Counting ducks: Simple I/O and flow control, github command-line setup"
 assigned: 2017-04-10 14:00:00.00-7
-due: 2017-04-18 23:59:00.00-7
+due: 2017-04-18 11:59:00.00-7
 ---
 
 
