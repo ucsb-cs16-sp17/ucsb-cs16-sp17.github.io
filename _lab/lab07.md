@@ -1,10 +1,10 @@
 ---
 layout: lab
 num: lab07
-ready: true
+ready: false 
 desc: "Advanced arrays and linked lists"
-assigned: 2017-03-06 15:30:00.00-8
-due: 2017-03-14 23:59:59.00-7
+assigned: 2017-05-22 14:00:00.00-7
+due: 2017-05-30 23:59:59.00-7
 ---
 
 
