@@ -1,18 +1,23 @@
 ---
 num: "lect16"
-desc: "Strings (No lecture -Diba on travel, watch videos by Michelle Craig)"
+desc: "Recursion, intro to lab07"
 ready: true
-pdfurl: https://c-programming.onlinelearning.utoronto.ca/Strings_and_Files.shtml
-annotatedpdfurl: https://c-programming.onlinelearning.utoronto.ca/Strings_and_Files.shtml
+pdfurl: /lectures/CS16_Lecture16.pdf
+annotatedpdfurl: /lectures/CS16_Lecture16_ann.pdf 
 annotatedready: false
-lecture_date: 2017-06-05
+lecture_date: 2017-05-31 
+
 ---
+# Code from lecture
+[https://github.com/ucsb-cs16-wi17/lecture-03-07](https://github.com/ucsb-cs16-wi17/lecture-03-07)
 
-# Notes
-I will be away on 03-09, so there will be no lecture.
-Instead you are asked to watch  videos 1 through 6 on C-strings by my colleague Michelle Craig:
+This is the lecture post midterm 2.
 
-[Click here to watch the video on C Strings](https://c-programming.onlinelearning.utoronto.ca/Strings_and_Files.shtml)
-
-The videos talk about C-strings in the context of C instead of C++. While the discussion on C-strings applies to both languages, one key difference is that printing to standard output is different in C vs C++. In the videos, wherever you see "printf" read "cout" to get the equivalent code in C++. 
-
+# Topics
+* Thinking recursively about problems on sequences
+* Recursion vs. iteration via examples: printing elements of an array in order and in reverse order, printing elements of a linked-list in order and in reverse order
+* How do we know our recursive solution is correct? Proof by induction
+* Is recursive better than iterative?
+* Problems that have a naturally recursive solution
+* Under the hood of recursive functions (how recursive functions use the stack)
+* Helper functions
