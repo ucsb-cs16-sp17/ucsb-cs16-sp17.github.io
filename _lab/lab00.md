@@ -3,8 +3,8 @@ layout: lab
 num: lab00	
 ready: true
 desc: "Getting started with C++ functions and github's web interface"
-assigned: 2017-01-10 15:30:00.00-8
-due: 2017-01-13 23:59:00.00-8
+assigned: 2017-04-03 14:00:00.00-7
+due: 2017-04-11 23:59:00.00-7
 ---
 
 # Introduction
