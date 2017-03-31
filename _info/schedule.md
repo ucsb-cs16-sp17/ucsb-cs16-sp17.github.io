@@ -6,16 +6,19 @@ layout: default
 
 # Schedule <a name="schedule"></a>
 
-* **Lecture**: Tue. and Thu. 3:30pm-4:45pm NH 1006, ATTENDANCE REQUIRED.
-* **Lab**:(50 minute discussion sections) Wednesdays starting at 4pm, 5pm, 6pm, 7pm PHELP 3525, ATTENDANCE REQUIRED.
+* **Lecture**: Mon and Wed 2:00pm-3:15pm CHEM 1171, ATTENDANCE REQUIRED.
+* **Lab**:(50 minute discussion sections) Tuesdays starting at 12pm, 1pm, 2pm, PHELPS 3525, ATTENDANCE REQUIRED.
 
 See the complete schedule on our Google Calendar
 
-<p> The Google calendar below specifies the schedule for the lectures, open lab hours and office hours. Please check for updates to the calendar on a daily basis </p>
+## Schedule of lectures, open lab hours and office hours.
+
+Please check for updates on our Google calendar on a daily basis. 
 
 <iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=a27efvh0puu3stlmn7lh1v1vtc%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
-TA Office location
+## TA Office location
+
 ![TA trailer](/images/936.png)
 
 [Back to Syllabus](/info/syllabus/)
