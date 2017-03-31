@@ -8,4 +8,3 @@ annotatedready: false
 lecture_date: 2017-06-07
 ---
 
-* We will mostly focus on recursion!

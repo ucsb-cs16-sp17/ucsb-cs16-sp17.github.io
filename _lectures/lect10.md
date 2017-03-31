@@ -18,6 +18,7 @@ lecture_date:  2017-05-08
 * Declaring structs
 * Different ways of accessing member variables of a structs
 * Pointers to structs, why and when to use them?
+* Passing structs to functions by value, by reference and by address
 * Pointer pitfalls
 
 

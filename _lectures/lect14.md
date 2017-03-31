@@ -1,6 +1,6 @@
 ---
 num: "lect14"
-desc: "More linked lists, Dynamic Arrays, Dynamic memory pitfalls: memory leaks, dangling pointers, segfaults"
+desc: "Strings and recursion on strings, intro to lab08"
 ready: false
 pdfurl: /lectures/CS16_Lecture14.pdf
 annotatedpdfurl: /lectures/CS16_Lecture14_ann.pdf
@@ -12,9 +12,12 @@ lecture_date: 2017-05-24
 ## Code from lecture
 [https://github.com/ucsb-cs16-wi17/lecture-02-23](https://github.com/ucsb-cs16-wi17/lecture-02-23)
 
-* Iterating through linked lists using traversal pointers
-* Dynamic memory pitfalls: memory leaks (how to avoid and detect (valgrind))
-* Dynamic arrays
-* Contrast arrays of ints and arrays of structs
-* Revisit passing arrays to functions
-* Review of homework 10
+## Topics
+* Intro to lab08
+* char arrays, C-strings and string literals
+* Basic operations on C-Strings using the cstring library functions
+* String class objects and methods (similarities and differences with c-strings)
+* Recursion on strings
+
+
+

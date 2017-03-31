@@ -1,6 +1,6 @@
 ---
 num: "lect17"
-desc: "Strings"
+desc: "Advanced problems in recursion with arrays and strings, more on debugging with gdb"
 ready: false
 pdfurl: /lectures/CS16_Lecture17.pdf
 annotatedpdfurl: /lectures/CS16_Lecture17_ann.pdf
@@ -10,8 +10,6 @@ lecture_date: 2017-06-05
 
 # Topics
 
-* Discussion on data structures
-* Intro to running time complexity
+* Binary search
 * Linked-list vs. arrays - exploring pros and cons 
-* Where do we go from here - more advanced data structures - skip lists, binary search trees ....
-* C++ implements all this for you as part of its STL
+* More on debugging with gdb and dealing with segfaults
