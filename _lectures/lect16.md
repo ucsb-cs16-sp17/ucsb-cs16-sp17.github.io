@@ -1,6 +1,6 @@
 ---
 num: "lect16"
-desc: "Advanced problems with linked-lists and recursion"
+desc: "Advanced problems in recursion on linked-lists"
 ready: false
 pdfurl: /lectures/CS16_Lecture16.pdf
 annotatedpdfurl: /lectures/CS16_Lecture16_ann.pdf 
