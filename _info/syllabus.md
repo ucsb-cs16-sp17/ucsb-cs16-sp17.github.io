@@ -21,23 +21,29 @@ You must contact the instructor for clarification if you receive information fro
 
 ## Course instructor: Diba Mirza 
 * email: dimirza@cs.ucsb.edu	
-* Office hours: Tues, Thurs: 9am - 11am, Harold Frank Hall 1155
+* Office hours time and location are available on [course Google Calendar](/info/schedule/)
 * Homepage: [https://www.cs.ucsb.edu/~dimirza/](https://www.cs.ucsb.edu/~dimirza/)
  
 ## Teaching Assistants
-* Lin Chai: linchai@cs.ucsb.edu
-* Harshitha Murthy: harshitha@umail.ucsb.edu
-* Daria Rudneva: drudneva@umail.ucsb.edu
+* Chutian (Kevin) Shen 
+* Kun Wan
+
 
 TA office hours are available on our [course Google Calendar](/info/schedule/)
 
 ## Undergraduate Tutors 
+* Andrew Huang
 * Angela Yung
 * Barbara Korycki	
+* Bryanna Phan
 * Jimmy	Le	
+* Natasha Lee
 * Sayali Kakade	
 * Sean Shelton	
-* Steven Fields	
+* Sherry Li
+* Shreyas CR
+* Steven Fields
+* Thien Hoang	
 
 The tutors will help with the labs and other instructional activities as part of a new pilot program.
 
@@ -45,9 +51,6 @@ The tutors will help with the labs and other instructional activities as part of
 [Back to Syllabus](#syllabus){: data-ajax="false"}
 
 # Schedule <a name="schedule"></a>
-
-* **Lecture**: Tue. and Thu. 3:30pm-4:45pm NH 1006, ATTENDANCE REQUIRED.
-* **Lab**:(50 minute discussion sections) Wednesdays starting at 4pm, 5pm, 6pm, 7pm PHELPS 3525, ATTENDANCE REQUIRED.
 
 For lab, lecture and office hours please check the [course Google Calendar](/info/schedule/)
 For hw, lab and exam schedule, please check the [assignment calendar](/info/calendar/)

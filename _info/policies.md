@@ -21,52 +21,42 @@ Thus <strong>attendance is required</strong>, and <strong>reading the assigned r
 ## Grade assignment policy
 <table border="2">
   <tr>
+    <td>A+</td>
+    <td>97-100</td>
     <td>A</td>
-    <td>93</td>
-    <td>83</td>
-    <td>C</td>
-    <td>73</td>
-    <td>63</td>
-  </tr>
-  <tr>
+    <td>93-97</td>
     <td>A-</td>
-    <td>90</td>
-    <td>80</td>
-    <td>C-</td>
-    <td>70</td>
-    <td>60</td>
+    <td>90-93</td>
   </tr>
   <tr>
     <td>B+</td>
-    <td>87</td>
-    <td>77</td>
-    <td>D+</td>
-    <td>67</td>
-    <td>57</td>
-  </tr>
-  <tr>
+    <td>87-90</td>
     <td>B</td>
-    <td>83</td>
-    <td>73</td>
-    <td>D</td>
-    <td>63</td>
-    <td>53</td>
-  </tr>
-  <tr>
+    <td>83-87</td>
     <td>B-</td>
-    <td>80</td>
-    <td>70</td>
-    <td>D-</td>
-    <td>60</td>
-    <td>50</td>
+    <td>80-83</td>
   </tr>
   <tr>
     <td>C+</td>
-    <td>77</td>
-    <td>67</td>
-    <td>F</td>
-    <td colspan="2">weighted course average below 60 <strong>OR</strong> weighted exam average below 50</td>
+    <td>77-80</td>
+    <td>C</td>
+    <td>73-77</td>
+    <td>C-</td>
+    <td>70-73</td>
+
   </tr>
+  <tr>
+    <td>D+</td>
+    <td>67-70</td>
+    <td>D</td>
+    <td>63-67</td>
+    <td>D-</td>
+    <td>60-63</td>
+
+  </tr>
+    <td>F</td>
+    <td>Below 60</td>
+
 </table>
 <p><strong>Curving: </strong>The grade  scale above represents the <em>minimum</em> letter grade you will be assigned&#8212;at the instructor's discretion, the grading scale  may be altered <em>in the students' favor</em> if this will be better reflect the students' mastery of the material. Thus, <em>if</em> there is a &quot;curve&quot;, it will be applied at the <em>end</em>, not to individual assignments.</p>
 <p><strong>A+ grades: </strong>These may be awarded to the very best performing students in the class—but the cutoff for A+ grades will be determined at the end of the course at the discretion of the instructor (there is no pre-determined cutoff---an average of 97 or more doesn't guarantee you an A+ grade.)</p>
