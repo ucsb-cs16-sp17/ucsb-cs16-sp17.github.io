@@ -3,13 +3,13 @@ num: "lect01"
 lecture_date: 2017-04-03
 desc: "Course overview, a gentle intro to C++ - Standard I/O, variables,
 if-else control structure"
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture1.pdf
 annotatedpdfurl: /lectures/CS16_Lecture1_ann.pdf
 annotatedready: false 
 ---
 # Code from lecture
-[https://github.com/ucsb-cs16-wi17/lecture-01-10](https://github.com/ucsb-cs16-wi17/lecture-01-10)
+
 
 # Topics
 
