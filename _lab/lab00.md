@@ -78,7 +78,7 @@ Sign up for a free account on [Github](https://github.com/). Use your official u
 
 To join our github organization, follow these easy steps:
 
-1. click on this link:[ https://ucsb-cs16-sp17-signup.herokuapp.com/]( https://ucsb-cs16-sp17-signup.herokuapp.com/). You should see the following welcome message, click on the blue "sign in with Github" button:
+1. click on this link:[ https://ucsb-cs16-s17-signup.herokuapp.com/]( https://ucsb-cs16-sp17-signup.herokuapp.com/). You should see the following welcome message (with the org name as ucsb-cs16-sp17), click on the blue "sign in with Github" button:
 
 ![welcome](/lab/lab00/enter-org/pic1.png){:height="500px"}
 
@@ -465,7 +465,7 @@ Next, you need to join the CS16 course. Look for the "Join Class" link at the to
 
 <img src="submit-topbar.png" width="542" alt="submit.cs Top Bar" />
 
-Once you see the list of all courses, click on the <b>"Join CS16_Mirza_w17"</b> button.
+Once you see the list of all courses, click on the <b>"Join CS16_s17_mirza"</b> button.
 
 You should then see CS16 appear on your homepage when logging in to the submit.cs system. Click on the course now.
 
