@@ -13,9 +13,9 @@ due: 2017-04-11 11:59:00.00-7
 	* Check out your [mentor group](/info/mentor_groups/)
 	* Note our exact meeting location: <img src="meetingLocation.png" width="400" alt="Meeting location" />
 
-2. Read the lab introduction
+2. Read the lab introduction (see next section)
 
-3. Complete step 1 of the lab (create a college of engineering account if you don't have one already)
+3. Complete step 1 of the lab (create a college of engineering account and a github account if you don't have one already, and sign up to be added to our github organization)
 
 # Introduction
 
