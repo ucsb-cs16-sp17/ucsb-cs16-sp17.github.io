@@ -8,14 +8,10 @@ due: 2017-04-11 11:59:00.00-7
 ---
 # Activities to complete prior to coming to the lab
 
-1. Note the meeting location for this lab
+1. Note the meeting location for this lab: For this lab and this lab alone, we will meet in the lawns in front of the Physical Sciences - North building, at the assigned section time. Your mentor will be waiting for you there. After a brief "getting to know you" game, you will be escorted to the Phelps lab- 3525. For this lab along, you may stay in the Phelps labs for 10 minutes after the hour to make progress on your lab.
 
-For this lab and this lab alone, we will meet in the lawns in front of the Physical Sciences - North building, at the assigned section time. Your mentor will be waiting for you there. After a brief "getting to know you" game, you will be escorted to the Phelps lab- 3525. For this lab along, you may stay in the Phelps labs for 10 minutes after the hour to make progress on your lab.
-
-* Check out your [mentor group](/info/mentor_groups/)
-* Note our exact meeting location:
-
-<img src="meetingLocation.png" width="400" alt="Meeting location" />
+	* Check out your [mentor group](/info/mentor_groups/)
+	* Note our exact meeting location: <img src="meetingLocation.png" width="400" alt="Meeting location" />
 
 2. Read the lab introduction
 
