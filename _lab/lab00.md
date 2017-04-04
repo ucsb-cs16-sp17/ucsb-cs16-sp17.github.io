@@ -78,7 +78,7 @@ Sign up for a free account on [Github](https://github.com/). Use your official u
 
 To join our github organization, follow these easy steps:
 
-1. click on this link:[ https://ucsb-cs16-s17-signup.herokuapp.com/]( https://ucsb-cs16-sp17-signup.herokuapp.com/). You should see the following welcome message (with the org name as ucsb-cs16-sp17), click on the blue "sign in with Github" button:
+1. click on this link:[ https://ucsb-cs16-s17-signup.herokuapp.com/]( https://ucsb-cs16-s17-signup.herokuapp.com/). You should see the following welcome message (with the org name as ucsb-cs16-sp17), click on the blue "sign in with Github" button:
 
 ![welcome](/lab/lab00/enter-org/pic1.png){:height="500px"}
 
