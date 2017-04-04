@@ -538,14 +538,14 @@ Your repo name should be lab00_your-github-username. For example if your github 
 
 ![git-upload-hello](/lab/lab00/upload-hello-cpp.png){:height="500px"}
 
-7. Now either drag and drop the "hello.cpp" file from your machine or use the "Choose your files" option to browse through your local directory and upload the file. Then press the green "Commit new files" button. Navigate back to your repo to see that the hello.cpp file is correctly listed along with the other files. Click on it and you should see your code on github's web interface. For more practice and fun upload a picture of yourself. Use your name as the file name. Continue to explore the web interface of your github repo. For example, try clicking on the "commits" link in your repo. What does that show you and what do you think it means? 
+7. Now either drag and drop the "hello.cpp" file from your machine or use the "Choose your files" option to browse through your local directory and upload the file. Then press the green "Commit new files" button. Navigate back to your repo to see that the hello.cpp file is correctly listed along with the other files. Click on it and you should see your code on github's web interface. Continue to explore the web interface of your github repo. For example, try clicking on the "commits" link in your repo. What does that show you and what do you think it means? 
 
 Congratulations on completing your introductory exercise to github. We will continue to explore git in the subsequent assignments.
 
 
 ## Step 10: Done!
 
-<p>You can continue to make submissions on submit.cs until your submission receives a score of 100/100. If you have a perfect score and  have also successfully uploaded your code and picture to your github repo, you are done with this assignment. We will be grading the git part of this assignment manually on github. Congratulations on completing your first C++ program!</p>
+<p>You can continue to make submissions on submit.cs until your submission receives a score of 100/100. If you have a perfect score and  have also successfully uploaded your code to your github repo, you are done with this assignment. We will be grading the git part of this assignment manually on github. Congratulations on completing your first C++ program!</p>
 
 <p>If you are in the Phelps lab or in CSIL, <b>make sure to log out of the machine before you leave</b>. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.</p>
 
