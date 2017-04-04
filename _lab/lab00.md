@@ -46,7 +46,7 @@ This lab must be completed INDIVIDUALLY. In the subsequent labs you are encourag
 
 You may now go ahead and complete the following steps:
 
-* [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
+* [Create a College of Engineering computer account, a github account and sign into our github organization](#step1){: data-ajax="false"}
 * [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
 * [Learn basic unix commands and create your lab00 directory.](#step3){: data-ajax="false"}
 * [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
@@ -58,7 +58,9 @@ You may now go ahead and complete the following steps:
 * [Perform basic git configurations](#step10)
 
 
-## Step 1: Create an Engineering (CoE) Account <a name="step1"></a>
+## Step 1: Create an Engineering (CoE) Account, a github account and sign into our class github organization <a name="step1"></a>
+
+### Create an CoE account if you don't have one already
 
 To log in to the machines in the Computer Science labs, or to connect remotely, you will need a **College of Engineering account**.
 
@@ -67,6 +69,28 @@ At this point, please go to [THIS LINK](https://ucsb.box.com/s/px12flf8g41m8g0gq
 You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
 
 If you are enrolled in <i>any</i> CoE course this quarter (including CS16), you can create your account immediately. If you are not, you will need to contact the ECI Help Desk at <a href="mailto:help@engineering.ucsb.edu">help@engineering.ucsb.edu</a>.
+
+### Create a github account
+
+Sign up for a free account on [Github](https://github.com/). Use your official ucsb email when signing up. Sign into [Github](https://github.com/) with your github account.
+
+### Sign up to be added into our class organization
+
+To join our github organization, follow these easy steps:
+
+1. click on this link:[ https://ucsb-cs16-sp17-signup.herokuapp.com/]( https://ucsb-cs16-sp17-signup.herokuapp.com/). You should see the following welcome message, click on the blue "sign in with Github" button:
+
+![welcome](/lab/lab00/enter-org/pic1.png){:height="500px"}
+
+2. The next screen asks you to authorize our app to add you to our class organization. Click on the green "authorize application" button.
+
+![authorize](/lab/lab00/enter-org/pic2.png){:height="500px"}
+
+3. Enter your github and you should see the following screen that shows you were successfully added to our class organization:
+
+![success](/lab/lab00/enter-org/pic4.png){:height="500px"}
+
+
 
 <hr>
 
@@ -487,42 +511,26 @@ After the 1 minute delay, the submit system will show your score and give you fe
 <hr>
 
 
-## Step 9: Create a github account and explore its web interface <a name="step9"></a>
+## Step 9: Explore github's web interface and declare a partner <a name="step9"></a>
 
 If you have made it to this step, then you have successfully created a C++ program, tested it on a remote server (csil.cs.ucsb.edu) and made a successful submission. We would however like you to do one more step to get familiarized with git and github. Here is some motivation: When developing large programs, it is very useful to save working versions of your code that you can always revert to. Trying to do this manually often leads to total chaos!! That's why professional programmers use some kind of version control system (VCS). We will use a popular VCS called Git. With Git all versions of your code will be available to you and your collaborators (in later labs this would be your pair-programming partner) anytime, anywhere! It will also help the course staff view your progress as you work on the assignments.
 
 1. Before we begin, read this article to get an overview of git: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/)
 
-2. Create a github account. You can sign up for a free account on [Github](https://github.com/). Use your official ucsb email when signing up. Sign into github with your github account. 
+2. You will now create a git repo. The concept of a repo was explained in the article that you just read. New projects always start with this step. Since Github promotes "open source" projects, repos created under your default github account are *public*. This means that they are visible to everyone on the internet. However, for this class your assignments have to be "closed source", and not open to your classmates and others on the internet. This requires that you create *private* repos. These are repos that are only visible to you, your pair-partner and the instructional staff. You can only create private repos within our class organization on github: ucsb-cs16-sp17. So, the next step is to join our class organization.
 
-3. Now that you have a github account you can create a git repo. The concept of a repo was explained in the article that you just read. New projects always start with this step. Since Github promotes "open source" projects, repos created under your default github account are *public*. This means that they are visible to everyone on the internet. However, for this class your assignments have to be "closed source", and not open to your classmates and others on the internet. This requires that you create *private* repos. These are repos that are only visible to you, your pair-partner and the instructional staff. You can only create private repos within our class organization on github: ucsb-cs16-wi17. So, the next step is to join our class organization.
-
-4. To join our organization, follow these easy steps:
-
-4a. click on this link:[ https://ucsb-cs16-wi17-signup.herokuapp.com/]( https://ucsb-cs16-wi17-signup.herokuapp.com/). You should see the following welcome message, click on the blue "sign in with Github" button:
-
-![welcome](/lab/lab00/enter-org/pic1.png){:height="500px"}
-
-4b. The next screen asks you to authorize our app to add you to our class organization. Click on the green "authorize application" button.
-
-![authorize](/lab/lab00/enter-org/pic2.png){:height="500px"}
-
-4c. Enter your github and you should see the following screen that shows you were successfully added to our class organization:
-
-![success](/lab/lab00/enter-org/pic4.png){:height="500px"}
-
-
-5. Read this article on [creating a github repo under an organization](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/). Open a browser and navigate to our class organization on github: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard). Click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article, to create a PRIVATE repo containing only a README.md and a .gitignore. See screenshot below:
+3. Read this article on [creating a github repo under an organization](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/). Open a browser and navigate to our class organization on github: [ucsb-cs16-sp17](https://github.com/orgs/ucsb-cs16-sp17/dashboard). Click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article, to create a PRIVATE repo containing only a README.md and a .gitignore. See screenshot below:
 
 ![new-repo](/lab/lab00/enter-org/pic5.png){:height="500px"}
 
 
-
 Your repo name should be lab00_your-github-username. For example if your github username is jgaucho, you should name your repo as lab00_jgaucho. Make sure you select the PRIVATE option when creating your repo.
 
-6. Check to see if you have the files: README.txt and .gitignore in your repo. If you don't see these files, contact an instructor or ask for help on Piazza. To learn more about the .gitignore, read this article: [About gitignore](https://ucsb-cs56-pconrad.github.io/topics/git_gitignore/)
+4. Check to see if you have the files: README.txt and .gitignore in your repo. If you don't see these files, contact an instructor or ask for help on Piazza. To learn more about the .gitignore, read this article: [About gitignore](https://ucsb-cs56-pconrad.github.io/topics/git_gitignore/)
 
-7. Use github's web interface to upload your hello.cpp file. We recommend that you be physically present on a lab machine where you have access to a web browser and a local copy of your hello.cpp program. On your web browser, navigate to your repo on github. If your repo name is lab00_jgaucho, the link to the repo is: [https://github.com/ucsb-cs16-wi17/lab00_jgaucho](https://github.com/ucsb-cs16-wi17/lab00_jgaucho). Click on the "Upload files" button as shown below. 
+5. Use github's web interface to edit the README file. In the README, add your and your partners name and perm number. If you don't know how to do this yet, wait until I demonstrate it in the next lecture. You may proceed to the next step
+
+6. Upload your hello.cpp file. To do this step you should be physically present on a lab machine or in CSIL where you have access to a web browser and a local copy of your hello.cpp program. On your web browser, navigate to your repo on github. If your repo name is lab00_jgaucho, the link to the repo is: [https://github.com/ucsb-cs16-sp17/lab00_jgaucho](https://github.com/ucsb-cs16-sp17/lab00_jgaucho). Click on the "Upload files" button as shown below. 
 
 ![git-file-upload](/lab/lab00/git-repo-pic_ink-upload.jpg){:height="500px"}
 
@@ -530,7 +538,7 @@ Your repo name should be lab00_your-github-username. For example if your github 
 
 ![git-upload-hello](/lab/lab00/upload-hello-cpp.png){:height="500px"}
 
-8. Now either drag and drop the "hello.cpp" file from your machine or use the "Choose your files" option to browse through your local directory and upload the file. Then press the green "Commit new files" button. Navigate back to your repo to see that the hello.cpp file is correctly listed along with the other files. Click on it and you should see your code on github's web interface. For more practice and fun upload a picture of yourself. Use your name as the file name. Continue to explore the web interface of your github repo. For example, try clicking on the "commits" link in your repo. What does that show you and what do you think it means? 
+7. Now either drag and drop the "hello.cpp" file from your machine or use the "Choose your files" option to browse through your local directory and upload the file. Then press the green "Commit new files" button. Navigate back to your repo to see that the hello.cpp file is correctly listed along with the other files. Click on it and you should see your code on github's web interface. For more practice and fun upload a picture of yourself. Use your name as the file name. Continue to explore the web interface of your github repo. For example, try clicking on the "commits" link in your repo. What does that show you and what do you think it means? 
 
 Congratulations on completing your introductory exercise to github. We will continue to explore git in the subsequent assignments.
 
