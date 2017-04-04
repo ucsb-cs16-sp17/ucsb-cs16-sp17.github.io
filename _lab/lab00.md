@@ -6,26 +6,50 @@ desc: "Getting started with C++ functions and github's web interface"
 assigned: 2017-04-04 14:00:00.00-7
 due: 2017-04-11 11:59:00.00-7
 ---
-# Meeting location
+# Activities to complete prior to coming to the lab
 
-For this lab and this lab alone, we will meet in the lawns in front of the Physical Sciences - North building, at the assigned section time. Your mentor will be waiting for you there. After a brief "getting to know you" game, you will be escorted to the Phelps lab.
+1. Note the meeting location for this lab
+
+For this lab and this lab alone, we will meet in the lawns in front of the Physical Sciences - North building, at the assigned section time. Your mentor will be waiting for you there. After a brief "getting to know you" game, you will be escorted to the Phelps lab- 3525. For this lab along, you may stay in the Phelps labs for 10 minutes after the hour to make progress on your lab.
 
 * Check out your [mentor group](/info/mentor_groups/)
 * Note our exact meeting location:
 
 <img src="meetingLocation.png" width="200" alt="Meeting location" />
 
+2. Read the lab introduction
+
+3. Complete step 1 of the lab (create a college of engineering account if you don't have one already)
 
 # Introduction
 
-Your first lab for this week is an introduction to your mentor group and programming on CSIL and in the Computer Science (Phelps) lab. The intended outcomes are:
+Your first lab for this week is an introduction to your mentor group and programming on CSIL and in the Computer Science (Phelps) lab. 
 
+You will start with activities outside the lab (out in the lawns). The intended of those activities are:
 
-You will write your first C++ program that will print a specific text out on your computer display. This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with a programming partner.
+* Getting to know your peers and mentors (starting with their names)
+* Finding a potential programming partner who you will work with on subsequent labs (you don't have to make that decision until the end of the lab)
 
-For this first lab, you will do the following:
+You will then proceed to complete the rest of the lab. The intended outcomes are:
 
-* [Read and sign the academic integrity form](#step0){: data-ajax="false"}
+* Knowing how to opena terminal on the computers in Phelps lab
+* Learning some basic unix commands to navigate the linux file system
+* Learning the basics of an editor (vim or emacs)
+* Writing your first C++ program that will print a specific text out on your computer display. 
+* Learning about github's web interface
+* Learning how to remotely log into the CSIL servers and what that means
+
+Before leaving the lab you must get the following things checked off by your mentor:
+
+* Signed the electronic attendance sheet (your mentor should do this on your behalf)
+* Progress on your C++ program
+* Successful creation of a github account and signed up into our class github organization.
+* The name of your programming partner for lab01 (must be someone from your mentor group)
+
+This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with a programming partner.
+
+You may now go ahead and complete the following steps:
+
 * [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
 * [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
 * [Learn basic unix commands and create your lab00 directory.](#step3){: data-ajax="false"}
@@ -37,9 +61,6 @@ For this first lab, you will do the following:
 * [Create a github account and explore its web interface](#step9){: data-ajax="false"}
 * [Perform basic git configurations](#step10)
 
-## Step 0: Academic Integrity (AI)<a name="step0"></a>
-
-[Sign this form to indicate you understand the AI policies for CS 16](https://docs.google.com/forms/d/e/1FAIpQLSfHAPcJuULAJH-FtDlJ-FeLiERWvXPuvou1U7w2xdzwSjQHBA/viewform)
 
 ## Step 1: Create an Engineering (CoE) Account <a name="step1"></a>
 
@@ -442,7 +463,7 @@ Once you submit, you should see a page detailing your submission. The system wil
 
 You can <em>alternatively</em> submit your code from the command line (i.e. in the terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can also use this method when logged in remotely. To submit the the <b>hello.cpp</b> file to this assignment by running the command:
 
-	$ ~submit/submit -p 625 hello.cpp
+	$ ~submit/submit -p 660 hello.cpp
 
 The program will ask you to login <b>with your submit.cs username and password</b>. The password will not be printed to the terminal, but what you type will be used. It will also offer the option to save your credentials, so that you do not have login next time you submit. You may choose to do this or not. After the submission succeeds, you should see the program output something like:
 
