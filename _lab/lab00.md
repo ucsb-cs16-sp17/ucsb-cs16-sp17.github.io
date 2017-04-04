@@ -13,7 +13,7 @@ For this lab and this lab alone, we will meet in the lawns in front of the Physi
 * Check out your [mentor group](/info/mentor_groups/)
 * Note our exact meeting location:
 
-<img src="meetingLocation.png" width="79" alt="Meeting location" />
+<img src="meetingLocation.png" width="200" alt="Meeting location" />
 
 
 # Introduction
