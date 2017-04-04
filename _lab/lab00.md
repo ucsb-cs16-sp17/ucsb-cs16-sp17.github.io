@@ -6,10 +6,22 @@ desc: "Getting started with C++ functions and github's web interface"
 assigned: 2017-04-04 14:00:00.00-7
 due: 2017-04-11 11:59:00.00-7
 ---
+# Meeting location
+
+For this lab and this lab alone, we will meet in the lawns in front of the Physical Sciences - North building, at the assigned section time. Your mentor will be waiting for you there. After a brief "getting to know you" game, you will be escorted to the Phelps lab.
+
+* Check out your [mentor group](/info/mentor_groups/)
+* Note our exact meeting location:
+
+<img src="meetingLocationlab00.pdf" width="79" alt="Meeting location" />
+
 
 # Introduction
 
-Your first lab for this week is an introduction to programming on CSIL and in the Computer Science lab. You will write your first C++ program that will print a specific text out on your computer display. This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with a programming partner.
+Your first lab for this week is an introduction to your mentor group and programming on CSIL and in the Computer Science (Phelps) lab. The intended outcomes are:
+
+
+You will write your first C++ program that will print a specific text out on your computer display. This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with a programming partner.
 
 For this first lab, you will do the following:
 
