@@ -20,6 +20,8 @@ lecture_date: 2017-04-10
 * Creating a github repo and using github's web interface to store your first program
 
 * Intro to lab01
+* For loops are DIFFERENT in C++ than in Python. We'll discuss.
+* Simple accumulator
 * For, while and do-while loops - Discussion on when to use each
 * Nested loops 
 * Generating random numbers with rand()

@@ -5,10 +5,11 @@ desc: "Course overview, a gentle intro to C++ - Standard I/O"
 ready: true
 pdfurl: /lectures/CS16_Lecture1.pdf
 annotatedpdfurl: /lectures/CS16_Lecture1_ann.pdf
-annotatedready: false 
+annotatedready: true 
 ---
 # Code from lecture
 
+[https://github.com/ucsb-cs16-sp17/lectures/tree/master/0403](https://github.com/ucsb-cs16-sp17/lectures/tree/master/0403)
 
 # Topics
 

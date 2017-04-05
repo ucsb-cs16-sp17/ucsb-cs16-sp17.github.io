@@ -1,10 +1,10 @@
 ---
 num: "lect02"
-desc: "Variables and data types, evaluating C++ expressions, simple flow control- if-else, for loops"
+desc: "Variables and data types, evaluating C++ expressions, simple flow control- multiway and nested if-else"
 ready: true
 pdfurl:  /lectures/CS16_Lecture2.pdf
 annotatedpdfurl: /lectures/CS16_Lecture2_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-04-05
 ---
 
