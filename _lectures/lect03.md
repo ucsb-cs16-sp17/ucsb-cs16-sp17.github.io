@@ -11,7 +11,14 @@ lecture_date: 2017-04-10
 
 # Code from lecture
 
+
 # Topics 
+
+## Github intro
+* What is github? How and why we plan to use it in this class
+* What is a git repo?
+* Creating a github repo and using github's web interface to store your first program
+
 * Intro to lab01
 * For, while and do-while loops - Discussion on when to use each
 * Nested loops 

@@ -1,7 +1,7 @@
 ---
 num: "lect02"
-desc: "Evaluating C++ expressions, simple flow control- for, while loops, nested and multi-way if-else"
-ready: false
+desc: "Variables and data types, evaluating C++ expressions, simple flow control- if-else, for loops"
+ready: true
 pdfurl:  /lectures/CS16_Lecture2.pdf
 annotatedpdfurl: /lectures/CS16_Lecture2_ann.pdf
 annotatedready: false
@@ -10,9 +10,11 @@ lecture_date: 2017-04-05
 
 # Topics
 
+
 ## Simple flow control structures- For and while loops
+* If else statements are DIFFERENT in C++ than in Python. We'll discuss.
 * Nested and multi-way if-else 
-* For and while loops are DIFFERENT in C++ than in Python. We'll discuss.
+* For loops are DIFFERENT in C++ than in Python. We'll discuss.
 * Simple accumulator
 * Practice with a game of Fizzbuzz (using multiway if-else within loops)
  
@@ -24,10 +26,7 @@ lecture_date: 2017-04-05
 * lvalue and rvalue
 * Boolean expressions
 
-## Github intro
-* What is github? How and why we plan to use it in this class
-* What is a git repo?
-* Creating a github repo and using github's web interface to store your first program
+
 
 
 

@@ -1,8 +1,7 @@
 ---
 num: "lect01"
 lecture_date: 2017-04-03
-desc: "Course overview, a gentle intro to C++ - Standard I/O, variables,
-if-else control structure"
+desc: "Course overview, a gentle intro to C++ - Standard I/O"
 ready: true
 pdfurl: /lectures/CS16_Lecture1.pdf
 annotatedpdfurl: /lectures/CS16_Lecture1_ann.pdf
@@ -34,7 +33,6 @@ annotatedready: false
     * commenting your code
     * standard input, standard output and standard error with cin, cout, cerr
 * Unlike Python, you MUST "declare" variables on first appearance in any C++ program. We'll discuss what this means.
-* If else statements are DIFFERENT in C++ than in Python. We'll discuss.
 * Compiling with g++
 * Running your program
 
