@@ -8,14 +8,14 @@ annotatedready: true
 lecture_date: 2017-04-05
 ---
 
-# Topics
+# Code from lecture
+[https://github.com/ucsb-cs16-sp17/lectures/tree/master/0405](https://github.com/ucsb-cs16-sp17/lectures/tree/master/0405)
 
+# Topics
 
 ## Simple flow control structures- For and while loops
 * If else statements are DIFFERENT in C++ than in Python. We'll discuss.
 * Nested and multi-way if-else 
-* For loops are DIFFERENT in C++ than in Python. We'll discuss.
-* Simple accumulator
 * Practice with a game of Fizzbuzz (using multiway if-else within loops)
  
 ## C++ variables and datatypes (contd)
