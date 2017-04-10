@@ -1,7 +1,7 @@
 ---
 num: "lect03"
 desc:  "Nested loops, git, intro to lab01 "
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: /lectures/CS16_Lecture3_ann.pdf 
 annotatedready: false
