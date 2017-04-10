@@ -24,8 +24,7 @@ lecture_date: 2017-04-10
 * Simple accumulator
 * For, while and do-while loops - Discussion on when to use each
 * Nested loops 
-* Generating random numbers with rand()
-* Practice with a game of die
+* ASCII Art with nested loops
 If time permits - introduce functions
 * Basic abstraction in software: functions
 * C++ functions are different from Python functions
