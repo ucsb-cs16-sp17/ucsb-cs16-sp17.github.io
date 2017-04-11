@@ -52,7 +52,7 @@ You are now ready to get the starter code.
 
 Copy the code from the instructor's account on the CSIL server into your local git directory. If your local git directory is lab01_alily_jgaucho issue the following command:
 
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/lab01/
+  cp /cs/faculty/dimirza/cs16-sp17/labs/lab01/* ~/cs16/lab01/
 
 After doing this command, if you cd into ~/cs16/lab01/ and use the ls command, you should see three .cpp files and a README:
 
