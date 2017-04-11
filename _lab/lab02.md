@@ -22,6 +22,49 @@ Below are the links to different sections of the lab:
 * [What you'll be doing](#yourgoal){: data-ajax="false"}
 * [Step by Step Instructions](#stepbystep){: data-ajax="false"}
 * [Evaluation and grading](#eval){: data-ajax="false"}
+## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
+
+Its now time to use the git-command line tools to perform version control for the files in your git repo. Recall the information in the article [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) that you read in the previous lab. Read it again if you need to. The four essential commands we will be using are:
+
+```
+git pull
+git add .
+git commit -m "Initial version of lab01 files"
+git push origin master
+```
+
+Before you proceed, make sure you understand what each of these commands does. Once you are clear about that, go ahead and type them out on a terminal while in your git directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo. 
+
+Note 1: Everytime you add a new piece of logic to your code you should save a snapshot of the latest version of your code by issuing the commands: *git add ...* , *git commit ...* and *git push ...*. All the previous versions will be available to you as well and you have the option of reverting to older versions (We will see how in later labs). As you go through the rest of this lab you will essentially need to use these commands to keep track of the different versions of your code.
+
+Note 2: In this lab you copied the starter code from a local directory on CSIL to your local git repo on the same machine. In the future labs we will look at how to copy the starter code from another git repo! 
+
+Congratulations on integrating git into your workflow! Now proceed to the programming part of this assignment.
+
+
+
+## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
+
+Its now time to use the git-command line tools to perform version control for the files in your git repo. Recall the information in the article [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) that you read in the previous lab. Read it again if you need to. The four essential commands we will be using are:
+
+```
+git pull
+git add .
+git commit -m "Initial version of lab01 files"
+git push origin master
+```
+
+Before you proceed, make sure you understand what each of these commands does. Once you are clear about that, go ahead and type them out on a terminal while in your git directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo. 
+
+Note 1: Everytime you add a new piece of logic to your code you should save a snapshot of the latest version of your code by issuing the commands: *git add ...* , *git commit ...* and *git push ...*. All the previous versions will be available to you as well and you have the option of reverting to older versions (We will see how in later labs). As you go through the rest of this lab you will essentially need to use these commands to keep track of the different versions of your code.
+
+Note 2: In this lab you copied the starter code from a local directory on CSIL to your local git repo on the same machine. In the future labs we will look at how to copy the starter code from another git repo! 
+
+Congratulations on integrating git into your workflow! Now proceed to the programming part of this assignment.
+
+
+
+
 
 
 

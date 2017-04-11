@@ -1,69 +1,61 @@
 ---
 layout: lab
 num: lab01	
-ready: false
-desc: "Crunching numbers: Loops and functions, github command-line  "
+ready: true
+desc: "Crunching numbers: Loops and functions "
 assigned: 2017-04-11 09:00:00.00-7
-due: 2017-04-18 11:59:00.00-7
+due: 2017-04-18 23:59:00.00-7
 ---
 
 <div markdown="1">
 
-## Introduction
+## Goals for this lab
 
-The assignment for this week will utilize concepts of control flow that we covered in class. You may utilize other concepts of programming as well, as you see fit. In the last assignment we used github's web interface. In this section we will learn about github's command-line tools which allow you to perform version control in a terminal. To complete the lab follow these steps in order:
-
-* [Creating and cloning your repo](#clonerepo){: data-ajax="false"}
-* [Getting the starter code from a local directory into your local git directory](#getstarter){: data-ajax="false"}
-* [Using the git command line tools to save the first version of your code](#firstcommit){: data-ajax="false"}
-* [Solving the problems for this lab](#programs){: data-ajax="false"}
-* [Submit your code](#submit){: data-ajax="false"}
-* [Check submission results](#checksubmission){: data-ajax="false"}
-
-
-
-## Step 1: Creating and cloning your repo  <a name="clonerepo"></a>
-
+In this lab you will get practice with
+* for loops and while loops
+* nested loops
+* calculating a series using for loops and if-else statements
+* working with other data types (doubles)
+* functions
+* more practice with using git's web interface
 
 You are not expected to finish the entire lab in one sitting. Please don't rush through it and read all instructions carefully. We encourage you to work in pairs for this lab. Please sit with your pair partner on the same terminal. Decide who will be the 'driver' and who will be the 'navigator'. If you don't know what those terms mean, be sure to see the following video on pair programming:
 
 [http://bit.ly/pair-programming-video](http://bit.ly/pair-programming-video)
 
-Log into your CoE account on CSIL and open a terminal. This lab assumes that you have completed the following steps from the previous lab:
-
-(1) Have a high-level understanding of what git and github are all about. If you need a refresher, read this article: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/). Refer lab00.
-
-(2) Created a github account and have successfully uploaded a file (hello.cpp) in a git repo under our class organization. This verifies that you are part of our class organization. Refer to lab00 for more on this. 
+To complete the lab follow these steps in order:
 
 
-In the next steps you will integrate github's command line tools into your workflow:
+# Step by Step Instructions
 
-* First you need to perform some one-time configurations: On the CSIL servers open a terminal and navigate to your home directory by typing <code>cd ~</code>. Now in the command line you will set up your global user.name and user.email values. To do this type in the following commands, but change the name Alex Triton to your own real world first and last name. If you prefer, for privacy reasons, you may use your first name and last initial. Also, change the email address atriton@cs.ucsb.edu to your own @ucsb.edu email address.
+## Step 0: Check-in with your mentor
 
-```
-   git config --global user.name "Alex Triton"
+* At the start of every lab, you and your partner should get together with your mentor group and mentor. We encourage you to sit next to your partner and near your mentor group. Your mentor will come to you, but if they don't do so in the first 5 minutes, raise your hand to get their attention. Your mentor will give you any initial instructions as required for the lab, guiding you on the key learning goals and any challenging aspects that you need to pay special attention to. They will also take your attendance for that lab. This is also a time when you will check in about your progress in the programming assignments. Make sure that you always have the latest version of your code pushed to github before your weekly check-in with your mentor.
 
-   git config --global user.email "atriton@cs.ucsb.edu"
-```
+* If you have questions about pair programming, ask your mentor.
 
-* Create a new git repo: Open a browser and navigate to our class organization on github: [ucsb-cs16-sp17](https://github.com/orgs/ucsb-cs16-sp17/dashboard). Then go ahead and create a PRIVATE repo containing only a README.md and a .gitignore. To do this click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article. If you are working with a partner, only one of you needs to create the repo. 
+* If you reported a different partner to your mentor last week, please update your mentor before you proceed with the rest of the lab
 
-**Make sure you follow the right naming convention for your repo. If your github username is jgaucho and your partner's is alily, you should name your repo lab01_alily_jgaucho. Notice that the github usernames are listed in alphabetical order. Also make sure your repo is PRIVATE, so that you code cannot be viewed by your classmates.**
+* Choose who will be the pilot for the first part of the lab. The pilot should sit down in front of the computer now. The navigator gets a chair and sits next to the pilot. You should exchange roles after awhile, before the pilot gets tired, and before the navigator gets bored or distracted.
 
-* Add your partner as a collaborator: Read this article on [adding your partner as a collaborator on your github repo](https://ucsb-cs56-pconrad.github.io/topics/github_add_collaborator/). Then follow the steps in the article to add your partner.
+* If your partner shows up late, let your mentor know. Points will be deducted for students who don't show up on time. If you face difficulties with pair programming consult your mentor. 
 
-* Cloning your repo to your ~/cs16/ directory on CSIL: Recall this article that you read in lab01 about [cloning your repo](https://ucsb-cs16.github.io/topics/git_cloning_your_first_repo/). Read it again if you need to. Then, clone the repo that you just created in your ~/cs16/ directory. Suppose the git repo was named lab01_alily_jgaucho, after you clone it, you should see the directory lab01_alily_jgaucho appear under your ~/cs16 directory. `cd` into your git repo directory.
+
+## Step 1: Log on and create a directory for this lab
+
+* Log into the pilot's CoE account on CSIL and open a terminal. 
+* Under your cs16 directory, create a new directory named lab01 (refer to lab00 for instructions if you have forgotten how to do this)
 
 You are now ready to get the starter code.
 
-## Step 2: Getting the starter code from a local directory into your local git directory <a name="getstarter"></a>
+## Step 2: Getting the starter code  <a name="getstarter"></a>
 
 Copy the code from the instructor's account on the CSIL server into your local git directory. If your local git directory is lab01_alily_jgaucho issue the following command:
 
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab01-startercode/* ~/cs16/lab01_alily_jgaucho/
+  cp /cs/faculty/dimirza/cs16-sp17/labs/lab01-startercode/* ~/cs16/lab01/
 
 
-After doing this command, if you cd into ~/cs16/lab01_alily_jgaucho/ and use the ls command, you should see three .cpp files and a README:
+After doing this command, if you cd into ~/cs16/lab01/ and use the ls command, you should see three .cpp files and a README:
 
 ```
 -bash-4.2$ ls
@@ -71,29 +63,10 @@ min2.cpp  min3v1.cpp  min3v2.cpp README.md
 -bash-4.2$ 
 ```
 
-If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance. 
-
-## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
-
-Its now time to use the git-command line tools to perform version control for the files in your git repo. Recall the information in the article [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) that you read in the previous lab. Read it again if you need to. The four essential commands we will be using are:
-
-```
-git pull
-git add .
-git commit -m "Initial version of lab01 files"
-git push origin master
-```
-
-Before you proceed, make sure you understand what each of these commands does. Once you are clear about that, go ahead and type them out on a terminal while in your git directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo. 
-
-Note 1: Everytime you add a new piece of logic to your code you should save a snapshot of the latest version of your code by issuing the commands: *git add ...* , *git commit ...* and *git push ...*. All the previous versions will be available to you as well and you have the option of reverting to older versions (We will see how in later labs). As you go through the rest of this lab you will essentially need to use these commands to keep track of the different versions of your code.
-
-Note 2: In this lab you copied the starter code from a local directory on CSIL to your local git repo on the same machine. In the future labs we will look at how to copy the starter code from another git repo! 
-
-Congratulations on integrating git into your workflow! Now proceed to the programming part of this assignment.
+If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your mentor for assistance. 
 
 
-## Step 4: Solving the problems for this lab<a name="programs"></a>
+## Step 3: Solving the problems for this lab<a name="programs"></a>
 
 If you are in a pair, make sure you switch the driver and navigator roles at this point. You must switch roles twice more before the end of the lab.
 This assignment consists of 3 problems, each of which is described below. The first one is worth 20 points each, and the last two are worth 40 points each. Each should be solved in its own file and all three must be submitted for full assignment credit. These exercises are inspired by the ones from the textbook (in Ch. 2 and Ch. 3) - but they are NOT the same, so follow the instructions on THIS sheet carefully. 
@@ -101,7 +74,7 @@ This assignment consists of 3 problems, each of which is described below. The fi
 You will need to create <b>three files named block.cpp, min4.cpp, and pi.cpp</b>:
 Each corresponds to one of the problems listed below, which make up this lab.
 
-For a reminder on how to open and use a text editor to create and edit new source files, refer back to Lab #0.
+For a reminder on how to open and use a text editor to create and edit new source files, refer back to Lab #0. 
 
 For all the subproblems given in this assignment you must compile your code frequently (as you develop it), and test it extensively with as many inputs as you can think of. 
 
@@ -109,13 +82,34 @@ For all the subproblems given in this assignment you must compile your code freq
 
 ### Print a block
 
-In lab01 git directory (e.g. lab01_alily_jgaucho) open a file called `block.cpp` using the same editor you used for the previous labs. In that file, write a program that takes an input from a user for the number of rows and number of columns and prints out a block of characters that is based on these 2 parameters. The program should keep asking the user for input, and printing out the result, until the user enters zero for each of the input parameters.
+* Navigate to your lab01 directory using the cd command
+* open a file called `block.cpp` using the same editor you used for the previous labs. 
+* In that file, write a program that takes an input from a user for the number of rows and number of columns and prints out a block of characters that is based on these 2 parameters. The program should keep asking the user for input, and printing out the result, until the user enters zero for each of the input parameters.
 
 A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines), for all the different inputs and the output:
 
 <img src="block.png" width="700" alt="block program example" />
 
 Each string printed by the program should include a newline at the end, but no other trailing whitespace (i.e. extra space characters at the end of the line).
+
+For this problem you have to use a for-loop and a while loop. We covered for-loops in class. While loops are similar in that the code inside the body of the while is repeated as long as the while condition is true. We will talk about this more in the next lecture. Here is the syntax for while
+
+```
+while('expression'){
+	//Repeat these statements
+}
+```
+
+'expression' should be replaced by the appropriate boolean expression. The body of the loop is executed as long as the expression is true. e.g.
+
+```
+int x=5;
+while(x>0){
+    cout <<x<<" ";
+	x--;
+}
+```
+The above code prints 5 4 3 2 1.
 
 
 To compile your code use the g++ command as in lab01 OR the simple make command as in lab01
@@ -140,24 +134,13 @@ Run your executable as follows to test it out.
 
 Remember to re-compile the relevant files after you make any changes to the C++ code.
 
-As soon as you have finished one logical piece in your code, let's say you can print a row of 'Xs' instead of the whole block, save a version of your program using git. To do this use the git commands: *git add ...* , *git commit ...* and *git push ...*. 
-
-Specifically you should type the following:
-
-```
-git add block.cpp   OR git add .
-git commit -m "prints a row of Xs or whatever else your program does"
-git push origin master
-```
-
-The first time you run the above commands, navigate to your git repo on github. Click on your commit history, you should see 2 commits - one that has the initial version of the code containing only the provided starter code, another that has your latest changes - that's version control in action - hurray!
-
-Continue to the next part of the assignment. As you add new files and modify code, be sure to integrate the *git add ...* , *git commit ...* and *git push ...* routine into your workflow. 
 
 <hr>
 
 
 ### Calculate the approximate value of PI
+
+Switch roles with your partner.
 
 Write a C++ program that approximates the value of the constant π. Once again you should not resort to using predefind constants and functions for π, that are provided by C++ standard libraries. Instead you should compute the value of π based on the Leibniz formula for π. The formula is given below:
 
@@ -206,7 +189,7 @@ Be sure to have a newline after each "Enter the value..." prompt and no other wh
 
 Here is a link that gives the approximated values of pi for up to 1000 terms: [http://www.eveandersson.com/pi/gregory-leibniz](http://www.eveandersson.com/pi/gregory-leibniz)
 
-In addition, all approximated floating pointer numbers must be displayed to exactly three digits after the decimal point. To do this you should use set the precision for displaying floating point numbers. This is done as follows:
+In addition, all approximated floating pointer numbers must be displayed to exactly three digits after the decimal point. To do this you should use set the precision for displaying floating point numbers before any of the cout statements in your code. This is done as follows:
 
 ```
 cout.setf(ios::fixed); 	   // Display in fixed point notation. For example, display 1e-1 as 0.1 
@@ -218,8 +201,12 @@ cout.precision(3);         // Set the number of digits to display after the deci
 
 <hr>
 
+We recommend you complete the next section after the Wed(04/12) lecture because it involves functions and passing command line arguments to main, which we have not yet covered in class. Consider skipping over to the step "Submit your code". Make sure you check in with your mentor befor leaving the labs
+
 
 ### Calculate the minimum of 4 numbers
+
+Switch roles with your partner. 
 
 In this part of the lab you will write a program that compares 4 input numbers and prints out the smallest one. 
 
@@ -245,9 +232,10 @@ Your job in this step is to test min2, min3v1 and min3v2 with many different val
 In the next step, you will be taking these programs to the next logical step in this sequence.
 
 <b><i>Your main task</i></b>: Write min4.cpp
-Write a program that works just like min2 and min3v1 and min3v2, except it takes four ints on the command line, and prints the smallest value, handling ties appropriately.
 
-We encourage you to follow the model of min3v2.cpp if you can understand how this works, since your code will be far cleaner than trying to build this out of nested if/else statements.
+* Write a program that works just like min2 and min3v1 and min3v2, except it takes four ints on the command line, and prints the smallest value, handling ties appropriately.
+
+* We encourage you to follow the model of min3v2.cpp if you can understand how this works, since your code will be far cleaner than trying to build this out of nested if/else statements.
 
 If you DO use nested if/else statements, though, be sure that you indent and format your code appropriately.
 
@@ -263,7 +251,6 @@ Run your executable with different inputs to test it out.
 
 <hr>
 
-
 ## Step 5: Submit your code<a name="submit"></a>
 
 Once you are satisfied that your programs are correct, it is time to submit them. If you are working in a pair you should do the following steps to join the same group on submit.cs
@@ -271,7 +258,7 @@ Once you are satisfied that your programs are correct, it is time to submit them
 ### Joining the same group
 
 * Navigate to https://submit.cs.ucsb.edu
-* Go to CS16_Mirza_s17
+* Go to CS16_s17_mirza
 * Click on the lab page. You will see a blue button named “Join Groups” on top of the page, Click on the button
 * Click on you and your partner’s name. Create group.
 
@@ -286,24 +273,26 @@ Note: Please remember that you must submit the programs to obtain any credit for
 
 *Submitting via command line*
 
-You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely. 
+You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely or while on the csil machines. This is the preferred method of submitting
 
 Submit all the source files to this assignment by running the command:
-`~submit/submit -p 629 block.cpp min4.cpp pi.cpp`
-(629 is from the lab link https://submit.cs.ucsb.edu/p/629/group )
+`~submit/submit -p 691 block.cpp min4.cpp pi.cpp`
+(691 is from the lab link https://submit.cs.ucsb.edu/p/691/group )
 
 You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
 
-Make sure the latest version of your code is also available on git hub by doing a final *git add ...*, *git commit ...*, *git push ....* routine. Then go to github and check that the latest version of your code is available there.
 
-## Step 6: Check Submission Results<a name="checksubmission"></a>
+## Check Submission Results<a name="checksubmission"></a>
 
 After the 1 minute delay, the submit system will show your score and give you feedback on your submission. Refresh the webpage after a minute to see this information.
 
 You may submit this lab multiple times. You should submit only after local compilation does not produce any errors and runs as expected. The score of the last submission uploaded before the deadline will be used as your assignment grade.
 
 
-## Step 7: Done!<a name="done"></a>
+## Done!<a name="done"></a>
+
+Check in with your mentor to get marked for completing the lab. 
+Discuss with them any challenges you faced while completing the lab. If you haven't finished the lab (as is expected) discuss with your mentor when you can come to the open lab hours to finish the rest of the lab.
 
 You are now done with this assignment!
 If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.
@@ -322,7 +311,7 @@ In addition to the points given by submit.cs, our staff will be manually grading
 3. Variable names choices are reasonable
 4. Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
 5. Code is not unnecessarily or unreasonably complex when a simpler solution is available
-* (50 pts) Creating a git repo correctly following the prescribed naming convention, adding your partner as a collaborator, pushing the latest version of your code to github, you and your partner joining the same group on submit.cs
+
 
 </div>
 
