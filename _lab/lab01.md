@@ -304,13 +304,16 @@ If you are logged in remotely, you can log out using the exit command:
 
 ## Grading rubric 
 In addition to the points given by submit.cs, our staff will be manually grading your work and giving you points based on the following rubric:
-* (30 pts) Submitting on time, per instructions
-* (40 pts) Code style, including but not limited to:
+* (1 pt) Submitting on time, per instructions
+* (2 pts) Code style, including but not limited to:
 1. Code can be easily understood by humans familiar with C++ (including both the author(s) of the code, and non-authors of the code.)
 2. Code is neatly indented and formatted, following standard code indentation practices for C++ as illustrated in either the textbook, or example code given in lectures and labs
 3. Variable names choices are reasonable
 4. Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
 5. Code is not unnecessarily or unreasonably complex when a simpler solution is available
+
+* (1pt) Demonstrate an understanding of the use of for-loops and if-else structure to mentor. Mentor will ask you to explain your block program at check out 
+* (1pt) Demonstrate an understanding of pair programming to your mentor. 
 
 
 </div>
