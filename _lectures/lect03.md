@@ -4,13 +4,13 @@ desc:  "Nested loops, git, intro to lab01 "
 ready: true
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: /lectures/CS16_Lecture3_ann.pdf 
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-04-10
 ---
 
 
 # Code from lecture
-
+[https://github.com/ucsb-cs16-sp17/lectures/tree/master/0410](https://github.com/ucsb-cs16-sp17/lectures/tree/master/0410)
 
 # Topics 
 
