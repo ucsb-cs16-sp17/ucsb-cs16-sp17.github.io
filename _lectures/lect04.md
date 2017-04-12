@@ -1,7 +1,7 @@
 ---
 num: "lect04"
 desc: "C++ functions and function call mechanics, passing parameters to programs"
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: /lectures/CS16_Lecture4_ann.pdf
 annotatedready: false
@@ -21,7 +21,7 @@ lecture_date: 2017-04-12
 * Drawing memory diagrams
 * Stack!
 * Passing parameters to programs/main()
-* Fizzbuzz command-line
+* Example programs taking input from command-line
 
 
  
