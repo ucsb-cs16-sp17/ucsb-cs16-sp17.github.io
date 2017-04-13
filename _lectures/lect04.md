@@ -4,7 +4,7 @@ desc: "C++ functions and function call mechanics, passing parameters to programs
 ready: true
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: /lectures/CS16_Lecture4_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-04-12
 ---
 
