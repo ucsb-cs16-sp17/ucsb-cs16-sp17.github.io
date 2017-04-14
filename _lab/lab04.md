@@ -20,6 +20,12 @@ If working in a pair: Choose who will be the first driver and who will start as 
 
 **PLEASE MAKE SURE YOU TRADE CONTACT INFORMATION WITH YOUR LAB PARTNER! This means emails, phone numbers, online chat handles, or whatever is necessary to continue working together when you are working remotely (like, say, if one of you goes home for the weekend).**
 
+You should now have a familiarity with:
+* Creating a git repo on github
+* Cloning your github to your local machine
+* Integrating git command-line tools into your workflow (*git add...*, *git commit..*, *git push ...*)
+
+
 Be sure to commit and push or work to github at the end of EVERY work session. That way, if your pair partner bails on you, you can continue working without him/her. :)
 
 <h2>Step 1: Getting Ready</h2>

@@ -7,79 +7,152 @@ assigned: 2017-04-18 9:00:00.00-7
 due: 2017-04-25 23:59:00.00-7
 ---
 
+# Pre-lab prep
+
+* Read this article on [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) 
+
+* Remotely log into your account on the csil servers and try to complete Step 1a of the lab that walks you through doing some initial ONE-TIME git configurations in your CoE account on CSIL.
+
+*Read through the entire lab, and identify parts that seem unclear to you. You can let your mentor know about this at the beginning of the lab.
+
 # Goals for this lab 
  
 By the time you have completed this lab, you should be able to
 
 * Use if/else and for loops to print various kinds of shapes with &quot;ASCII Art&quot;
 * Show that you understand how to work through the basic process of test-driven development in C++
-
-Below are the links to different sections of the lab:
-
-* [Skills Needed ](#skills){: data-ajax="false"}
-* [Ascii Art](#asciiart){: data-ajax="false"}
-* [An example for you to follow: starL](#starL){: data-ajax="false"}
-* [What you'll be doing](#yourgoal){: data-ajax="false"}
-* [Step by Step Instructions](#stepbystep){: data-ajax="false"}
-* [Evaluation and grading](#eval){: data-ajax="false"}
-## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
-
-Its now time to use the git-command line tools to perform version control for the files in your git repo. Recall the information in the article [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) that you read in the previous lab. Read it again if you need to. The four essential commands we will be using are:
-
-```
-git pull
-git add .
-git commit -m "Initial version of lab01 files"
-git push origin master
-```
-
-Before you proceed, make sure you understand what each of these commands does. Once you are clear about that, go ahead and type them out on a terminal while in your git directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo. 
-
-Note 1: Everytime you add a new piece of logic to your code you should save a snapshot of the latest version of your code by issuing the commands: *git add ...* , *git commit ...* and *git push ...*. All the previous versions will be available to you as well and you have the option of reverting to older versions (We will see how in later labs). As you go through the rest of this lab you will essentially need to use these commands to keep track of the different versions of your code.
-
-Note 2: In this lab you copied the starter code from a local directory on CSIL to your local git repo on the same machine. In the future labs we will look at how to copy the starter code from another git repo! 
-
-Congratulations on integrating git into your workflow! Now proceed to the programming part of this assignment.
-
-
-
-## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
-
-Its now time to use the git-command line tools to perform version control for the files in your git repo. Recall the information in the article [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) that you read in the previous lab. Read it again if you need to. The four essential commands we will be using are:
-
-```
-git pull
-git add .
-git commit -m "Initial version of lab01 files"
-git push origin master
-```
-
-Before you proceed, make sure you understand what each of these commands does. Once you are clear about that, go ahead and type them out on a terminal while in your git directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo. 
-
-Note 1: Everytime you add a new piece of logic to your code you should save a snapshot of the latest version of your code by issuing the commands: *git add ...* , *git commit ...* and *git push ...*. All the previous versions will be available to you as well and you have the option of reverting to older versions (We will see how in later labs). As you go through the rest of this lab you will essentially need to use these commands to keep track of the different versions of your code.
-
-Note 2: In this lab you copied the starter code from a local directory on CSIL to your local git repo on the same machine. In the future labs we will look at how to copy the starter code from another git repo! 
-
-Congratulations on integrating git into your workflow! Now proceed to the programming part of this assignment.
-
-
-
-
-
-
+* Integrate github into your work flow
 
 ## Skills Needed <a name="skills"></a>
 
 By now, we expect that you are comfortable with these basic skills from lab00 and lab01 so we will no longer describe them in as much detail as we did previously:
  
 * Using a text-editor to create and/or edit C++ programs
-* Creating a git repo on github
-* Cloning your github to your local machine
-* Integrating git command-line tools into your workflow (*git add...*, *git commit..*, *git push ...*)
 * Compiling and running C++ programs
 * Using the computers in both the CSIL and the Phelps labs to do basic things:
     * Performing basic management of directories and files with Unix commands such as mkdir, cd, pwd, ls, cp, mv
     * Submitting assignments in this class with the submit.cs system, and checking your results
+
+
+## Step 0: Check-in with your mentor 
+
+* At the start of every lab, you and your partner should get together with your mentor group and mentor. Your mentor will give you any initial instructions as required for the lab, guiding you on the key learning goals and any challenging aspects that you need to pay special attention to. They will also take your attendance for that lab. This is also a time when you will check in about your progress in the programming assignments. Make sure that you always have the latest version of your code pushed to github before your weekly check-in with your mentor.
+
+* If you reported a different partner to your mentor last week, please update your mentor before you proceed with the rest of the lab
+
+* Choose who will be the pilot for the first part of the lab. The pilot should sit down in front of the computer now. The navigator gets a chair and sits next to the pilot. You should exchange roles after awhile, before the pilot gets tired, and before the navigator gets bored or distracted.
+
+* If your partner shows up late, let your mentor know. Points will be deducted for students who don't show up on time. If you face difficulties with pair programming consult your mentor. 
+
+Below are the links to different sections of the lab:
+
+* [Step by step instructions to getting setup with github](#git){: data-ajax="false"}
+* [Ascii Art](#asciiart){: data-ajax="false"}
+* [An example for you to follow: starL](#starL){: data-ajax="false"}
+* [What you'll be doing](#yourgoal){: data-ajax="false"}
+* [Step by Step Instructions](#stepbystep){: data-ajax="false"}
+* [Evaluation and grading](#eval){: data-ajax="false"}
+
+
+# Step by Step Instructions to getting setup with github <a name="git"></a>
+
+## Step 1a: Do some initial ONE-TIME git configurations (this step has to be done individually)
+
+* On separate machines, log onto your account. 
+
+* Open a terminal window. As a reminder, that's the Application Menu, then System Tools, then Terminal Window.
+
+* In your ~/cs16 directory, type the following commands, replacing Alex Triton with your name and atriton@cs.ucsb.edu with your email address. 
+
+```
+   git config --global user.name "Alex Triton"
+
+   git config --global user.email "atriton@cs.ucsb.edu"
+```
+
+* Next, generate a private/public key pair and upload your public key to your github account. To do this refer to this tutorial: [https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/](https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/) In the process of setting up your key pair, when asked for a passphrase just press enter. By doing this step you will avoid having to enter a password or passphrase everytime you push your code to git. 
+
+* Clone the starter code repo from our class organization to the pilot's local account by typing the following commands
+
+```
+  git clone git@github.com:ucsb-cs16-sp17/cs16-sp17-starter-code.git
+```
+Note that this repo contains the starter code for all labs (although only the code for the current is up to date). So, you don't have to repeat the above step in subsequent labs. 
+
+
+## Step 1b: Create a new repo, add your partner as collaborator and clone the git repo that contains the starter code 
+
+* Create a repo for this lab on the pilot's github account (just like you did in lab00): To do this, open a browser and navigate to [www.github.com](www.github.com). Log into the pilot's github account. From the drop down menu on the left, select our class organization: ucsb-cs16-sp17 and proceed to create a new repo. You may refer to the instructions in lab00. Follow this naming convention: If your github username is jgaucho and your partner's is alily, your should name your repo lab02_agaucho_alily (usernames appear in alphabetical order). Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
+
+* The pilot should add the navigator as a collaborator on github. To do this navigate to the git repo you just created. Choose the settings tab. Then click on the 'Collaborators and teams' option on the left. Scroll all the way down and add the navigator's github account. Then press on the 'Add collaborator' button. Now you and the navigator share the ownership of your git repo. You won't work with your new repo until the end of the lab.
+
+
+* Now navigate to the cs16-sp17-starter-code directory, and do a git pull to get the latest version of the lab starter code. You must do this step again in subsequent labs
+
+```
+  cd cs16-sp17-starter-code
+  git pull
+```
+
+Never modify the code in the cs16-sp17-starter-code repo directly because you are not the owner of that repo. Instead you should work on a copy of those files.
+
+## Step 2: Clone the repo in the pilot's account and get the starter code
+
+* On the terminal, change to your cs16 directory:
+
+```
+cd ~/cs16
+```
+
+* Using the web-browser, navigate to your newly created repo on github. Find the address of your git repo. Click on the green "clone or download button". If your git repo was named lab02_alily_jgaucho, then the git address should something like: "git@github.com:ucsb-cs16-sp17/lab02_alily_jgaucho.git". Now clone your repo into your csil account by typing the following on the terminal, replacing the last argument with the address of your git repo
+
+```
+git clone git@github.com:ucsb-cs16-sp17/lab02_alily_jgaucho.git
+```
+
+* Type ls to see your new git repo directory and change into that directory
+
+```
+cd lab02_alily_jgaucho
+```
+
+
+* Copy the starter code by typing the following command:
+
+```
+cp ~/cs16/cs16-sp17-starter-code/lab02/* ./
+```
+
+You should see the following files:
+
+```
+$ls
+backslash.cpp  README.md  starC.cpp  starL.cpp  starT.cpp  starZ.cpp
+```
+
+## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
+
+Its now time to use the git-command line tools to perform version control for the files in your git repo. The four essential commands we will be using are:
+
+```
+git pull
+git add .
+git commit -m "Initial version of lab02 files"
+git push origin master
+```
+
+Go ahead and type them out on a terminal in your git repo (lab02_alily_jgaucho) directory. The above commands save a snapshot of your code on github. To check that this was done sucessfully open a web-browser and navigate to your repo on github. Then check to see that the starter code appears in your repo. 
+
+Note 1: Everytime you add a new piece of logic to your code you should save a snapshot of the latest version of your code by issuing the commands: *git add ...* , *git commit ...* and *git push ...*. All the previous versions will be available to you as well and you have the option of reverting to older versions (We will see how in later labs). As you go through the rest of this lab you will essentially need to use these commands to keep track of the different versions of your code.
+ 
+
+Congratulations on integrating git into your workflow! Now proceed to the programming part of this assignment.
+
+## Step 4: Create a team on submit.cs
+
+* Go to submit.cs, navigate to CS16, S17, lab02, and create a team for you and your pair partner.
+
+
 
 ## What we'll be doing in this lab: ASCII Art <a name="asciiart"></a>
 
@@ -159,57 +232,8 @@ starZ renders the letters Z, but requires a minimum width of 3.   It only takes 
 
 # Step by Step Instructions <a name="stepbystep"></a>
 
-## Step 1: Getting Started 
 
-* In the previous lab you probably noticed that everytime you pushed your code to git you had to enter your username and password. To avoid this we ask that you use a ssh-key method to establish your identity with git hub.
-The main task is to generate a private/public key and upload your public key to github. To do this refer to this tutorial: [https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/](https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/)
-
-* Decide if you are working alone, or working in a pair.  
-
-If you are working in a pair:
-
-* Go to submit.cs, navigate to CS16, S17, lab02, and create a team for you and your pair partner.   
-* Decide on initial navigator and driver.
-* Driver, log on to driver's CSIL account.
-* Go to our class organization on github: [ucsb-cs16-sp17](https://github.com/orgs/ucsb-cs16-sp17/dashboard) and create a new repo following the naming conventions introduced in previous labs. 
-* Add your partner as a collaborator on the newly created git repo
-* Log on to CSIL, bring up a terminal window, and clone your repo in your ~/cs16/ directory following the instructions from previous labs
-
-## Step 2:  Get the startercode
-
-Copy the code from the instructor's account on the CSIL server into your local git directory.
-
-First, Move to the local git directory:
-
-```
-cd local_git_directory
-(Example: cd lab02_alily_jgaucho) 
-```
-
-Then, Copy the code to the local git directory: (Don't forget the period (.) in the end)
-
-```
-cp /cs/faculty/dimirza/cs16-sp17/labs/lab02-startercode/* .
-```
-
-After executing this command in your local git directory ( ~/cs16/lab02_alily_jgaucho/) . If you use the ls command, you should see the following files:
-
-```
--bash-4.2$ ls
-backslash.cpp  README.md  starC.cpp  starL.cpp  starT.cpp  starZ.cpp
--bash-4.2$ 
-```
-
-Save the initial version of your code by typing out the following commands:
-
-```
-git add .
-git commit -m "Initial version"
-git push origin master
-```
-
-
-## Step 3: Practicing with the starL program 
+## Step 1: Practicing with the starL program 
 
 First compile the starL.cpp file that you have in this week’s directory with the option (-std=c++11 ) as per the following command:
 
@@ -231,7 +255,7 @@ With the command line parameters -1 -1, the program runs a set of tests on itsel
 
 Look over the code and try to understand how it works.  When you feel ready, move on to the next step, and try tackling the starT.cpp, starC.cpp and starZ.cpp programs.
 
-## Step 4: Writing the starT program 
+## Step 2: Writing the starT program 
 
 Your job now is to start edit the starT.cpp program, which has a function inside of it that is a "stub".  That function does NOT produce the correct output---it always just returns the string "stub".   You need to replace that code with a proper implementation of starT.  You can use the implementation of starL in the starL.cpp file as a model.
 
@@ -247,7 +271,7 @@ In general the parameters to the startT program are width, followed by height. Y
 When you think you have a correct implementation, try submitting to the submit.cs system.  You can submit just your starT.cpp program to see how far along you've gotten:
 
 ```
-~submit/submit -p 635 starT.cpp 
+~submit/submit -p 698 starT.cpp 
 ```
 
 Note that this will show failures for <code>starC.cpp</code> and <code>starZ.cpp</code>, which are files that you'll be working on at a later step.
@@ -255,7 +279,7 @@ Note that this will show failures for <code>starC.cpp</code> and <code>starZ.cpp
 You could also just submit the "stubs" for those&mdash;though those will fail some or all of the tests:
 
 ```
-~submit/submit -p 635 starC.cpp starT.cpp starZ.cpp
+~submit/submit -p 698 starC.cpp starT.cpp starZ.cpp
 ```
 
 Either way, for now, concentrate only on the test failures that pertain to starT.cpp and try to address any problems you encounter.  If you fix these NOW before moving on to starC.cpp and/or starZ.cpp, you will likely have better success, because what you learn from fixing your mistakes will help you get those other parts solved more quickly and easily.
@@ -292,7 +316,7 @@ git commit -m "Implemented starT()"
 git push origin master
 ```
 
-## Step 5: Writing the starC program 
+## Step 3: Writing the starC program 
 
 Next, write the starC program.   Follow the same basic procedure as for the starT.cpp program.
 
@@ -311,7 +335,7 @@ then, you are ready to try testing your code on the submit system.
 If you submit starC.cpp together with your starT.cpp program, your submit command will look like this:
 
 ```
-~submit/submit -p 635 starC.cpp starT.cpp 
+~submit/submit -p 698 starC.cpp starT.cpp 
 ```
 
 (The order of the files doesn't matter&mdash;list starT.cpp first, or starC.cpp first, aand either way, the result is the same.)
@@ -329,8 +353,7 @@ git push origin master
 ```
 
 
-
-## Step 6: Writing the starZ program 
+## Step 4: Writing the starZ program 
 
 For the starZ.cpp program, we have these rules:
 
@@ -379,7 +402,7 @@ And, if there is not exactly one parameter, there should be an appropriate "usag
 When you have a version that can pass its internal tests, try submitting it along with your starT.cpp and starC.cpp to the submit.cs system.  
 
 ```
-~submit/submit -p 635 starC.cpp starT.cpp starZ.cpp
+~submit/submit -p 698 starC.cpp starT.cpp starZ.cpp
 ```
 
 If there are errors reported, fix them.    
@@ -395,23 +418,22 @@ Make sure you do a final *git add ..*, *git commit ...* and *git push ..* to mak
 
 # Evaluation and Grading <a name="eval"></a>
  
-Mechanics:
-
-* (30 pts) submitting starT.cpp, starC.cpp and starZ.cpp to the submit system (10 points each)
-* (30 pts) submission is on time and follows instructions 
-* (30 pts) starT.cpp, starC.cpp and starZ.cpp files submitted  have good header comments 
 
 
 Correctness
 
 * (150 pts) 15 tests, ten points each, executed by submit.cs system
 
-Style: Style points will be provided based on your github submission, so make sure you have one
+End of lab check off points:
 
-* (10 pts) Correct creation of the lab02 github repo in our class organization following the naming conventions provided in the lab. Addig your partner as collaborator and partner accepting the invitation. Both partners joining the same group on submit.cs
+* (10 pts) submission is on time and follows instructions 
 
-* (30 pts) All three programs have good programming style, including proper use of indentation, reasonable choices for variable names, readable code, reasonable use of whitespace, and other good programming practices. You must have good header comments as illustrated in the coding examples done in class. First line should be the name of your file, followed by date of creation, author and a brief description of the program. You must use curly braces in the body of all control structures (if-else, for and while) even if they contain a single statement. You should not mix tabs and spaces when indenting your code
+* (10 pts) starT.cpp, starC.cpp and starZ.cpp files submitted  have good header comments 
 
-Refer back to the feedback provided by the teaching staff on your lab02 code on github.
+* (10 pts) Correct creation of the lab02 github repo in our class organization following the naming conventions provided in the lab. Adding your partner as collaborator and partner accepting the invitation. Both partners joining the same group on submit.cs
+
+* (20 pts) All three programs have good programming style, including proper use of indentation, reasonable choices for variable names, readable code, reasonable use of whitespace, and other good programming practices. You must have good header comments as illustrated in the coding examples done in class. First line should be the name of your file, followed by date of creation, author and a brief description of the program. You must use curly braces in the body of all control structures (if-else, for and while) even if they contain a single statement. You should not mix tabs and spaces when indenting your code
+
+
 
 
