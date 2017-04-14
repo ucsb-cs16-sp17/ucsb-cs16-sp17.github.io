@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab02
-ready: false
+ready: true
 desc: "ASCII Art: Logical operators, integrating github into your workflow"
 assigned: 2017-04-18 9:00:00.00-7
 due: 2017-04-25 23:59:00.00-7
