@@ -1,7 +1,7 @@
 ---
 num: "lect05"
-desc: "Makefiles, intro to lab02 "
-ready: false
+desc: "Makefiles, gentle intro to TDD, intro to lab02 "
+ready: true
 pdfurl: /lectures/CS16_Lecture5.pdf
 annotatedpdfurl: /lectures/CS16_Lecture5_ann.pdf
 annotatedready: false 
@@ -9,13 +9,9 @@ lecture_date: 2017-04-17
 ---
 
 # Code from lecture
-[https://github.com/ucsb-cs16-wi17/lecture-01-31](https://github.com/ucsb-cs16-wi17/lecture-01-31)
 
-We will learn the following concepts by looking at the specific problem of drawing a house with a triangular roof and rectangular body!
 
 # Topics
-
-## Intro to lab02 - ASCII Art
 
 ## Under the hood of program compilation and execution
 * From high-level programs to machine code
@@ -28,6 +24,9 @@ We will learn the following concepts by looking at the specific problem of drawi
 * Linker errors
 * Header guards
 
+## Intro to lab02 - ASCII Art
+* Understanding what is expected
+* Introducing more flexibility into your code with command line arguments
 
 ## Review: Designing nested loops 
 * When do we need a loop?
