@@ -369,7 +369,7 @@ If instead, you see someting like this, it means you didn't pass some tests:
 
 If you are seeing something like that, try to understand the feedback you are getting before asking questions.  Then if you are still stuck, ask for help.  For example, the output above shows that the student forgot the "colon" (<code>:</code>) in the output.
 
-= Evaluation and Grading =
+# Evaluation and Grading <a name="eval"></a>
 
 To earn full credit for this lab (120 pts) you should have successfully submitted both myProg01.cpp and myProg02.cpp  via submit.cs and received a "green" indication that it passed all the tests for expected output.
 
