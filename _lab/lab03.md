@@ -365,7 +365,7 @@ If you see the following, it means you passed all the tests.  A successful submi
 
 If instead, you see someting like this, it means you didn't pass some tests:
 
-![error](/lab/lab01/submit.cs.error-50pct.png){:height="500px"}
+![error](/lab/lab03/submit.cs.error-50pct.png){:height="500px"}
 
 If you are seeing something like that, try to understand the feedback you are getting before asking questions.  Then if you are still stuck, ask for help.  For example, the output above shows that the student forgot the "colon" (<code>:</code>) in the output.
 
