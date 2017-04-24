@@ -65,7 +65,6 @@ This step is aslo very similar to lab02, first open terminal and go to the direc
 ```
   cd ~/cs16/cs16-sp17-starter-code
   git pull
-
 ```
 
 Copy the code from your starter code directory to your local lab03 repo using the following command, <strong>REMEMBER</strong> to change the directory name in the commands below to your own directory's name, in this lab we simply use lab03_agaucho_alily as a example for your local git directory:
