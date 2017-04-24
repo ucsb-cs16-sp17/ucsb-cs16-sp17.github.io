@@ -76,7 +76,7 @@ In future weeks, we may simply say something like &quot;create a <code>~/cs16/la
 ## Step 3: Getting the starter code from a local directory <a name="step3"></a>
 
 
-This step is very similar to lab02, first open terminal and go to the directory where you cloned the starter code in lab02 and pull the latest version of start code.
+This step is very similar to lab02, first open terminal and go to the directory where you cloned the starter code in lab02 and pull the latest version of starter code.
 
 ```
   cd ~/cs16/cs16-sp17-starter-code
