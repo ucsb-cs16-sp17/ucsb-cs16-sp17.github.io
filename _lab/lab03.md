@@ -24,11 +24,11 @@ By the time you have completed this lab, you should be able to:
 # Step by Step Instructions 
 
 * [Log on to CSIL and bring up a terminal window](#step1){: data-ajax="false"}
-* [Create your working directory](#step2){: data-ajax="false"}
-* [Getting the starter code from a local directory](#step3){: data-ajax="false"}
-* [Compiling and running the first program for this assignment](#step4){: data-ajax="false"}
+* [Create a new repo, add your partner as collaborator and clone it to your local directory](#step2){: data-ajax="false"}
+* [Get the starter code from a local directory](#step3){: data-ajax="false"}
+* [Compile and run the first program for this assignment](#step4){: data-ajax="false"}
 * [Copy sample01.cpp to myProg01.cpp and make changes](#step5){: data-ajax="false"}
-* [Reading from input files and counting ducks](#step6){: data-ajax="false"}
+* [Read from input files and count ducks](#step6){: data-ajax="false"}
 * [A more detailed counting program](#step7){: data-ajax="false"}
 * [Turn in your code ](#step8){: data-ajax="false"}
 
@@ -57,7 +57,7 @@ In lab02,  we have done the same thing. So if you don't know to how to do that, 
 * Go to your CS16 directory and clone the repo locally.
 
 
-## Step 3: Getting the starter code from a local directory <a name="step3"></a>
+## Step 3: Get the starter code from a local directory <a name="step3"></a>
 
 
 This step is aslo very similar to lab02, first open terminal and go to the directory where you cloned the starter code in lab02 and pull the latest version of the starter code.
@@ -85,7 +85,7 @@ If you don't see those files, work with your pair partner to go back through the
 
 If so, you are ready to move on to the next step. 
 
-## Step 4: Compiling and running the first program for this assignment <a name="step4"></a>
+## Step 4: Compile and run the first program for this assignment <a name="step4"></a>
 
 The first program we are going to compile and run is one that demonstrates a for loop in C++.   
 
