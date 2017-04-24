@@ -50,39 +50,47 @@ account.
 
 In lab00,  we created your <code>~/cs16</code> directory, and the <code>~/cs16/lab00</code> directory.
 
-In this lab, we'll create the <code>~/cs16/lab01</code> directory.
+In this lab, we'll create the <code>~/cs16/lab03</code> directory.
 
 You can do this with the following unix command:
 
-<syntaxhighlight lang="bash">mkdir ~/cs16/lab01</syntaxhighlight>
+<syntaxhighlight lang="bash">mkdir ~/cs16/lab03</syntaxhighlight>
 
 Then you can use a <code>cd</code> command to go directly into that directory:
 
-<syntaxhighlight lang="bash">cd ~/cs16/lab01</syntaxhighlight>
+<syntaxhighlight lang="bash">cd ~/cs16/lab03</syntaxhighlight>
 
 You can then use the <code>pwd</code> command to make sure that you are in the proper
 spot. The result should look like this (except in place of /cs/faculty/dimirza, you'll see your own home directory listed, e.g. /cs/student/jsmith).
 
 ```
--bash-4.2$ mkdir ~/cs16/lab01
--bash-4.2$ cd ~/cs16/lab01
+-bash-4.2$ mkdir ~/cs16/lab03
+-bash-4.2$ cd ~/cs16/lab03
 -bash-4.2$ pwd
-/cs/faculty/dimirza/cs16/lab01
+/cs/faculty/dimirza/cs16/lab03
 -bash-4.2$
 ```
 
-In future weeks, we may simply say something like &quot;create a <code>~/cs16/lab01</code> directory and make it your current directory&quot;, without spelling out the Linux commands to do this.  You can always refer back to previous labs if you forget the details, but eventually you'll want to memorize some of the most useful commands such as <code>mkdir</code>, <code>cd</code>, <code>pwd</code> and <code>ls</code>.
+In future weeks, we may simply say something like &quot;create a <code>~/cs16/lab03</code> directory and make it your current directory&quot;, without spelling out the Linux commands to do this.  You can always refer back to previous labs if you forget the details, but eventually you'll want to memorize some of the most useful commands such as <code>mkdir</code>, <code>cd</code>, <code>pwd</code> and <code>ls</code>.
 
 ## Step 3: Getting the starter code from a local directory <a name="step3"></a>
 
 
+This step is very similar to lab02, first open terminal and go to the directory where you cloned the starter code in lab02 and pull the latest version of start code.
+
+```
+  cd ~/cs16/cs16-sp17-starter-code
+  git pull
+
+```
+
 Copy the code from the instructor's account on the CSIL server using the following command:
 
 ```
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab01-startercode/*  ~/cs16/lab01/
+  cp ~/cs16/cs16-sp17-starter-code/lab03/* ~/cs16/lab03/
 ```
 
-After doing this command, if you cd into ~/cs16/lab01/ and use the ls command, you should see several .cpp files:
+After doing this command, if you cd into ~/cs16/lab03/ and use the ls command, you should see several .cpp files:
 
 ```
 -bash-4.2$ ls
@@ -98,12 +106,12 @@ If so, you are ready to move on to the next step.
 
 The first program we are going to compile and run is one that demonstrates a for loop in C++.   
 
-In your lab01 directory, you should have a program called sample01.cpp that we copied in the previous step.   Here's how you can put yourself in that directory (though you should already be there):
+In your lab03 directory, you should have a program called sample01.cpp that we copied in the previous step.   Here's how you can put yourself in that directory (though you should already be there):
 
 ```
--bash-4.2$ cd ~/cs16/lab01/
+-bash-4.2$ cd ~/cs16/lab03/
 -bash-4.2$ pwd
-/cs/faculty/dimirza/cs16/lab01/
+/cs/faculty/dimirza/cs16/lab03/
 -bash-4.2$ 
 ```
 
@@ -310,15 +318,15 @@ Note that the submit.cs system may give you feedback on whether your code is cor
 
 Once you have joined the course, you should be able to submit your code by typing the sequence of commands shown below in a terminal window on CSIL:
 
-* Navigate to your ~/cs16/lab01 directory, the one containing your code for this week's lab.
+* Navigate to your ~/cs16/lab03 directory, the one containing your code for this week's lab.
 <pre>
--bash-4.2$ cd ~/cs16/lab01
+-bash-4.2$ cd ~/cs16/lab03
 </pre>
 
 * Use the <code>ls</code> command to list your files and to be sure that you have the myProg01.cpp and myProg02.cpp files in your directory.  It is ok if there are other files (countDucks.cpp, animals01.txt, etc.) along with the executables.  You only have to submit myProg01.cpp and myProg02.cpp.
 
 ```
--bash-4.2$ cd ~/cs16/lab01
+-bash-4.2$ cd ~/cs16/lab03
 -bash-4.2$ ls
 animals01.txt  countDucks.cpp  myProg02      sample01
 animals02.txt  myProg01.cpp    myProg02.cpp  sample01.cpp
@@ -327,26 +335,26 @@ animals02.txt  myProg01.cpp    myProg02.cpp  sample01.cpp
 
 * Use the following command to turn in your files:
 <pre>
--bash-4.2$ ~submit/submit -p 627 myProg01.cpp myProg02.cpp
+-bash-4.2$ ~submit/submit -p 700 myProg01.cpp myProg02.cpp
 </pre>
 
-The number 627 is the "project number" specfic to CS16 W17 lab01 for our class section.
+The number 700 is the "project number" specfic to CS16 S17 lab03 for our class section.
 
 ### What a successful turnin looks like 
 
 ```
-[dimirza@csil-02 lab01]$ pwd
-/cs/faculty/dimirza/cs16/lab01
-[dimirza@csil-02 lab01]$ ls
+[dimirza@csil-02 lab03]$ pwd
+/cs/faculty/dimirza/cs16/lab03
+[dimirza@csil-02 lab03]$ ls
 animals01.txt  countDucks      myProg01      myProg02      README.md
 animals02.txt  countDucks.cpp  myProg01.cpp  myProg02.cpp  sample01.cpp
-[dimirza@csil-02 lab01]$ ~submit/submit -p 627 myProg01.cpp myProg02.cpp
+[dimirza@csil-02 lab03]$ ~submit/submit -p 700 myProg01.cpp myProg02.cpp
 logged in as dimirza@cs.ucsb.edu
 Sending myProg01.cpp
 Sending myProg02.cpp
 Submission successful
 Results will be available at: https://submit.cs.ucsb.edu/submission/226377
-[dimirza@csil-02 lab01]$
+[dimirza@csil-02 lab03]$
 ```
 
 Once you have done the submit, go to the link shown.  (Yours will have a different number from the one given above.)
