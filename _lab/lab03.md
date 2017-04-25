@@ -183,7 +183,7 @@ Compile and run myProg01.cpp with these changes. The output should look like thi
 You are now ready to move to the next step.   
 
 
-Tip: *If you make a mistake that results in an "infinite loop", i.e. the window is just scrolling by without stopping, you can use CTRL/C (hold down Control and type C) to stop the program.*
+Tip: *If you make a mistake that results in an "infinite loop", i.e. the window is just scrolling by without stopping, you can use CTRL+C (hold down Control and type C) to stop the program.*
 
 
 ## Step 6: Reading from input files and counting ducks <a name="step6"></a>
