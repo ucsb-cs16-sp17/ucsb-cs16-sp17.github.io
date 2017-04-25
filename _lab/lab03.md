@@ -35,8 +35,6 @@ By the time you have completed this lab, you should be able to:
 
 ## Step 1: Log on to CSIL and bring up a terminal window. <a name="step1"></a>
 
-*Note: This assignment MUST be done individually. This is a correction to what was announced in lecture*
-
 I hope I can safely assume that you have all gotten a CoE account.
  If your account is not working,  get the attention of the instructor.
 
@@ -171,7 +169,7 @@ Now you have a new file called myProg01.cpp that is a copy of sample01.cpp.   Op
   * Instead of testing <code>i&lt;=n</code>, test whether <code>i&gt;0</code>
   * Instead of changing i by incrementing with <code>i++</code>, change it by decrementing with <code>i--</code>
   * Remove the printing of "i=" each time.  Instead just print the number.  And Instead of printing a newline after each number, just print one space.  We do that by changing <code>cout &lt;&lt; "i=" &lt;&lt; i &lt;&lt; endl;</code> to <code> cout &lt;&lt; i &lt;&lt; " ";</code>
-  * Add a line that prints a newline at the very end, just after the for loop is over, but BEFORE the <code>return 0;</code> statement. *Note: As a reminder, you get out of vim or gvim with ESC:x or ESC:wq . You can get out of emacs with CTRL/X followed by CTRL/C.  It will ask if you want to save changes; type y for yes.*
+  * Add a line that prints a newline at the very end, just after the for loop is over, but BEFORE the <code>return 0;</code> statement. *Note: As a reminder, you get out of vim or gvim with ESC:x or ESC:wq . You can get out of emacs with CTRL+X followed by CTRL+C.  It will ask if you want to save changes; type y for yes.*
 
 Compile and run myProg01.cpp with these changes. The output should look like this:
 
