@@ -346,7 +346,9 @@ At that point, you are ready to try submitting on the submit.cs system.
 
 For this lab, since there are a lot of files to upload to submit.cs, your best course is to type the following from the Linux/UNIX prompt, that is, from the command line (terminal) on any CS machine, including from your computer when you are remotely logged into a CS machine (via ssh):
 
-`$ ~submit/submit -p 717 *.cpp *.h`
+```
+$ ~submit/submit -p 717 *.cpp *.h
+```
 
 You can then copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
 
