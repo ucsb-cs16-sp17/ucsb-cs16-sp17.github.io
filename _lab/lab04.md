@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab04
-ready: false
+ready: true
 desc: "Odds and primes: Fun with arrays and makefiles"
 assigned: 2017-05-02 09:00:00.00-7
 due: 2017-05-09 23:59:00.00-7
@@ -346,7 +346,7 @@ At that point, you are ready to try submitting on the submit.cs system.
 
 For this lab, since there are a lot of files to upload to submit.cs, your best course is to type the following from the Linux/UNIX prompt, that is, from the command line (terminal) on any CS machine, including from your computer when you are remotely logged into a CS machine (via ssh):
 
-`$ ~submit/submit -p 640 *.cpp *.h`
+`$ ~submit/submit -p 717 *.cpp *.h`
 
 You can then copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
 
