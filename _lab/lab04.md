@@ -33,7 +33,7 @@ Be sure to commit and push or work to github at the end of EVERY work session. T
 
 2. If you are working as a pair, go to submit.cs, navigate to this lab page and create a team for you and your pair partner. Do this by clicking on the blue "Join Groups" button, then follow directions.
 
-3. Go to github and create a git repo for lab04 following the naming convention specified in previous labs (this step carries style points, see our feedback on lab02 to understand what we are looking for). If you are working with a partner only one of you needs to create the repo.
+3. Go to github and create a git repo for lab04 following the naming convention specified in previous labs. If you are working with a partner only one of you needs to create the repo.
 
 4. If you are working with a partner and you are the one who created the github repo, add your partner as a collborator on the repo
 
@@ -87,6 +87,7 @@ git push origin master
 ```
 
 <h2>Step 3: Reviewing Separate Compilation</h2>
+
 The files in your directory this week use separate compilation, that is each program is not necessarily taking all of its code from a single .cpp source file.
 
 In Lecture, we will introduce the idea of separate compilation, where your C++ program may be divided among multiple source files. The following web page explains more about separate compilation, dividing your program up among multiple C++ and .h files, and using a Makefile. I strongly encourage you to read over it briefly before you proceed with the lab: [Separate Compilation and Makefiles](https://foo.cs.ucsb.edu/16wiki/index.php/C%2B%2B:_Separate_Compilation_and_Makefiles)
@@ -97,7 +98,8 @@ Your first step is very simple to describe, but somewhat challenging. The challe
 
 To get started, do the following steps:
 
-<b>Step 4a: make clean</b>
+##Step 4a: make clean
+
 In your working directory, type <b>ls</b> and make note of the different files therein: some are .cpp types, some are .o (short for "object file"), some are .h (short for "header file"), and others do not have extensions (they are binary executables). Now, type <b>make clean</b>. This command cleans out any .o files and executables from your directory
 
 That should look like this:
@@ -112,7 +114,7 @@ countPrimesTest maxOfArrayTest maxOfArrayErrorTest sumOddsTest sumOfArrayTest ut
 
 Take a look at the <b>Makefile</b> file to understand why this happened.
 
-<b>Step 4b: make utilityTest</b>
+##Step 4b: make utilityTest
 
 Next type: `make utilityTest`
 
@@ -133,7 +135,7 @@ g++ -Wall -Wno-uninitialized  utilityTest.o tddFuncs.o utility.o -o utilityTest
 -bash-4.2$ 
 ```
 
-<b>Step 4c: Run ./utilityTest</b>
+## Step 4c: Run ./utilityTest
 
 Next, type `./utilityTest` 
 
@@ -163,7 +165,8 @@ PASSED: isPrime(1)
 -bash-4.2$ 
 ```
 
-<b>Step 4d: Repeat: edit, compile, run ,until all tests pass</b>
+##Step 4d: Repeat: edit, compile, run ,until all tests pass
+
 Now do these steps, repeatedly, until all tests pass:
 
 edit utility.cpp (e.g. emacs utility.cpp, or gvim utility.cpp)
