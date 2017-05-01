@@ -19,7 +19,7 @@ This lecture and many of the coming lectures require that we understand how our 
 * Declaring and initializing arrays in C++
 * Tracing code involving arrays
 * Array pitfalls: out of bound array access
-* Complex C++ declarations
+
 
 ## Test driven development
 
