@@ -1,7 +1,7 @@
 ---
 num: "lect08"
 desc: "Arrays, visualizing program dynamics, test-driven development, intro to lab04 "
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture8.pdf
 annotatedpdfurl: /lectures/CS16_Lecture8_ann.pdf
 annotatedready: false
