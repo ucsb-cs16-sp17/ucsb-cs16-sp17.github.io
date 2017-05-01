@@ -4,7 +4,7 @@ desc: "Data representation"
 ready: true
 pdfurl: /lectures/CS16_Lecture7.pdf
 annotatedpdfurl: /lectures/CS16_Lecture7_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-04-24
 ---
 
