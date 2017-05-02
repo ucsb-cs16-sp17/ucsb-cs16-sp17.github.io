@@ -217,7 +217,7 @@ You have the following .cpp files. This table indicates what you must do with ea
 
 
 <h2>Step 6: Actually Getting Started</h2>
-I suggest you start by typing: `make`.
+I suggest you start by typing: `make`
 
 You should see a lot of activity as programs are compiled. You then will have a lot of executables you can run. Here is a list. Try running each one and see what happens.
 
