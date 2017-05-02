@@ -100,7 +100,9 @@ Your first step is very simple to describe, but somewhat challenging. The challe
 
 To get started, do the following steps:
 
-##Step 4a: make clean
+## Step 4a: make clean
+
+Next type: `make clean`
 
 In your working directory, type <b>ls</b> and make note of the different files therein: some are .cpp types, some are .o (short for "object file"), some are .h (short for "header file"), and others do not have extensions (they are binary executables). Now, type <b>make clean</b>. This command cleans out any .o files and executables from your directory
 
@@ -116,7 +118,7 @@ countPrimesTest maxOfArrayTest maxOfArrayErrorTest sumOddsTest sumOfArrayTest ut
 
 Take a look at the <b>Makefile</b> file to understand why this happened.
 
-##Step 4b: make utilityTest
+## Step 4b: make utilityTest
 
 Next type: `make utilityTest`
 
