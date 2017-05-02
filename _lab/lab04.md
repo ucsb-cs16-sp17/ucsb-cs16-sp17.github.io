@@ -54,7 +54,9 @@ This step is similar to lab02, first open terminal and go to the directory where
   git pull
 ```
 Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
-
+```
+  cd ../lab04_gaucho_ally
+```
 Copy the code from your starter code directory to your local lab04 repo using the following command.
 
 ```
