@@ -169,7 +169,7 @@ PASSED: isPrime(1)
 -bash-4.2$ 
 ```
 
-## Step 4d: Repeat: edit, compile, run ,until all tests pass
+## Step 4d: Repeat: edit, compile, run, until all tests pass
 
 Now do these steps, repeatedly, until all tests pass:
 
