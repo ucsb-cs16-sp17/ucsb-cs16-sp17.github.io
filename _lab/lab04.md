@@ -169,8 +169,10 @@ PASSED: isPrime(1)
 
 Now do these steps, repeatedly, until all tests pass:
 
-edit utility.cpp (e.g. emacs utility.cpp, or gvim utility.cpp)
+edit utility.cpp (e.g. emacs utility.cpp, or vim utility.cpp)
+<br />
 make utilityTest
+<br />
 run utilityTest (e.g. ./utilityTest)
 
 Submit working versions of your code on github using the commands:
