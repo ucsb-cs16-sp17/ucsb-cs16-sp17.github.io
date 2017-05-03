@@ -1,6 +1,6 @@
 ---
 num: "lect10"
-desc: "Pointers and structs, references, call by reference, intro to lab05"
+desc: "Pointers and structs, references, call by value, address and reference, intro to lab05"
 ready: false
 pdfurl: /lectures/CS16_Lecture10.pdf
 annotatedpdfurl: /lectures/CS16_Lecture10_ann.pdf
