@@ -54,7 +54,9 @@ This step is similar to lab02, first open terminal and go to the directory where
   git pull
 ```
 Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
-
+```
+  cd ../lab04_gaucho_ally
+```
 Copy the code from your starter code directory to your local lab04 repo using the following command.
 
 ```
@@ -98,7 +100,9 @@ Your first step is very simple to describe, but somewhat challenging. The challe
 
 To get started, do the following steps:
 
-##Step 4a: make clean
+## Step 4a: make clean
+
+Next type: `make clean`
 
 In your working directory, type <b>ls</b> and make note of the different files therein: some are .cpp types, some are .o (short for "object file"), some are .h (short for "header file"), and others do not have extensions (they are binary executables). Now, type <b>make clean</b>. This command cleans out any .o files and executables from your directory
 
@@ -114,7 +118,7 @@ countPrimesTest maxOfArrayTest maxOfArrayErrorTest sumOddsTest sumOfArrayTest ut
 
 Take a look at the <b>Makefile</b> file to understand why this happened.
 
-##Step 4b: make utilityTest
+## Step 4b: make utilityTest
 
 Next type: `make utilityTest`
 
@@ -165,12 +169,14 @@ PASSED: isPrime(1)
 -bash-4.2$ 
 ```
 
-## Step 4d: Repeat: edit, compile, run ,until all tests pass
+## Step 4d: Repeat: edit, compile, run, until all tests pass
 
 Now do these steps, repeatedly, until all tests pass:
 
-edit utility.cpp (e.g. emacs utility.cpp, or gvim utility.cpp)
+edit utility.cpp (e.g. emacs utility.cpp, or vim utility.cpp)
+<br />
 make utilityTest
+<br />
 run utilityTest (e.g. ./utilityTest)
 
 Submit working versions of your code on github using the commands:
@@ -217,7 +223,7 @@ You have the following .cpp files. This table indicates what you must do with ea
 
 
 <h2>Step 6: Actually Getting Started</h2>
-I suggest you start by typing: `make`.
+I suggest you start by typing: `make`
 
 You should see a lot of activity as programs are compiled. You then will have a lot of executables you can run. Here is a list. Try running each one and see what happens.
 
