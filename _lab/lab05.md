@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab05
-ready: false
+ready: true
 desc: "Fun with shapes: Pointers"
 assigned: 2017-05-09 09:00:00.00-7
 due: 2017-05-16 23:59:00.00-7
