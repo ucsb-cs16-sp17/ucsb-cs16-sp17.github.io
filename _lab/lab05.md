@@ -198,7 +198,7 @@ At that point, you are ready to try submitting on the submit.cs system.
 Here is the command to submit this week's labs:
 
 ```
-~submit/submit -p 644 *.cpp *.h
+~submit/submit -p 729 *.cpp *.h
 ```
 
 Commit and push the latest version of your code on github
