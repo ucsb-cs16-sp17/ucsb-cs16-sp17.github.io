@@ -52,6 +52,7 @@ Copy the code from your starter code directory to your local lab05 repo using th
 
 ```
   cp ~/cs16/cs16-sp17-starter-code/lab04/* ./
+```
 
 Typing the list (ls) command should show you the following files in your current directory
 
