@@ -1,7 +1,7 @@
 ---
 num: "lect10"
 desc: "Pointers and structs, references, call by value, address and reference, intro to lab05"
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture10.pdf
 annotatedpdfurl: /lectures/CS16_Lecture10_ann.pdf
 annotatedready: false
@@ -11,7 +11,7 @@ lecture_date:  2017-05-08
 # Topics
 
 ## Code from lecture
-[https://github.com/ucsb-cs16-wi17/lecture-02-14](https://github.com/ucsb-cs16-wi17/lecture-02-14)
+
 
 ## Intro to lab05
 ## Pointers and structs
