@@ -191,7 +191,7 @@ I would hope this would be obvious, but I have to say it so that there is no amb
 Here is the command to submit this week's labs:
 
 ```
-~submit/submit -p 648 *.cpp *.h
+~submit/submit -p 733 *.cpp *.h
 ```
 
 = Grading Rubric =
