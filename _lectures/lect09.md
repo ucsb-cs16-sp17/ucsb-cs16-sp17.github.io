@@ -4,7 +4,7 @@ desc: "Pointers, pointers and arrays"
 ready: true
 pdfurl: /lectures/CS16_Lecture9.pdf
 annotatedpdfurl: /lectures/CS16_Lecture9_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-05-03
 ---
 
