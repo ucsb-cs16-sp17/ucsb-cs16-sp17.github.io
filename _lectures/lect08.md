@@ -4,7 +4,7 @@ desc: "Arrays, visualizing program dynamics, test-driven development, intro to l
 ready: true
 pdfurl: /lectures/CS16_Lecture8.pdf
 annotatedpdfurl: /lectures/CS16_Lecture8_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-05-01 
 ---
 # Code from lecture
