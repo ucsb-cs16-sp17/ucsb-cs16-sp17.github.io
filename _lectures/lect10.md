@@ -4,7 +4,7 @@ desc: "Pointers and structs, references, call by value, address and reference, i
 ready: true
 pdfurl: /lectures/CS16_Lecture10.pdf
 annotatedpdfurl: /lectures/CS16_Lecture10_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date:  2017-05-08
 ---
 
