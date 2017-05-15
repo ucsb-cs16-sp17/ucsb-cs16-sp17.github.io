@@ -139,7 +139,7 @@ Node* deleteNodeRecursivelyHelper(Node *head, int value) {
 //For example: 
 //Before inserting 4, we have list as: 2,6,8
 //After inserting 4, list is changed as: 2,4,6,8
-void insertNode(LinkedList *list, int value) {
+void insertNodeToSortedList(LinkedList *list, int value) {
     assert(list != NULL);
     //Add code for this.
     //HINTS:
