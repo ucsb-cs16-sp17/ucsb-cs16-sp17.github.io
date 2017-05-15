@@ -4,7 +4,7 @@ desc: "Dynamic memory allocation,  Linked Lists, intro to lab06"
 ready: true
 pdfurl: /lectures/CS16_Lecture12.pdf
 annotatedpdfurl: /lectures/CS16_Lecture12_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-05-15 
 ---
 
