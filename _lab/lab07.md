@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab07
-ready: false 
+ready: true 
 desc: "Advanced arrays and linked lists"
 assigned: 2017-05-23 09:00:00.00-7
 due: 2017-05-30 23:59:59.00-7
