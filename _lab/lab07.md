@@ -38,11 +38,20 @@ Note: Remember to push your work to github at the end of EVERY work session. Tha
 
 ## Step 2: Obtaining the starter code
 
-Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
-Copy the starter code by running the following command
+This step is similar to lab02, first open terminal and go to the directory where you cloned the starter code in lab02 and pull the latest version of the starter code.
 
 ```
-cp /cs/faculty/dimirza/cs16-wi17/labs/lab07-startercode/* ./
+  cd ~/cs16/cs16-sp17-starter-code
+  git pull
+```
+Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
+```
+  cd ../lab07_gaucho_ally
+```
+Copy the code from your starter code directory to your local lab07 repo using the following command.
+
+```
+  cp ~/cs16/cs16-sp17-starter-code/lab07/* ./
 ```
 
 Typing the list (ls) command should show you the following files in your current directory
@@ -400,7 +409,7 @@ At that point, you are ready to try submitting on the submit.cs system.
 Here is the command to submit this week's labs:
 
 ```
-~submit/submit -p 649 *.cpp *.h
+~submit/submit -p 741 *.cpp *.h
 ```
 
 # Grading Rubric 
