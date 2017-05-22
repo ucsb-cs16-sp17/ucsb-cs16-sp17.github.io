@@ -1,6 +1,6 @@
 ---
 num: "lect14"
-desc: "Strings and recursion on strings, intro to lab08"
+desc: "Recursion, strings"
 ready: false
 pdfurl: /lectures/CS16_Lecture14.pdf
 annotatedpdfurl: /lectures/CS16_Lecture14_ann.pdf
@@ -21,6 +21,9 @@ lecture_date: 2017-05-24
 * Under the hood of recursive functions (how recursive functions use the stack)
 * Helper functions
 * Recursion on strings
+* char arrays, C-strings and string literals
+* Basic operations on C-Strings using the cstring library functions
+* String class objects and methods (similarities and differences with c-strings)
 * Intro to lab08
 
 
