@@ -4,7 +4,7 @@ desc: "Dynamic memory pitfalls: memory leaks, dangling pointers, segfaults, intr
 ready: true
 pdfurl: /lectures/CS16_Lecture13.pdf
 annotatedpdfurl: /lectures/CS16_Lecture13_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-05-22
 ---
 
