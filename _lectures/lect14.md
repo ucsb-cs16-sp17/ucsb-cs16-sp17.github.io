@@ -4,7 +4,7 @@ desc: "Recursion, strings"
 ready: true
 pdfurl: /lectures/CS16_Lecture14.pdf
 annotatedpdfurl: /lectures/CS16_Lecture14_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-05-24 
 ---
 
