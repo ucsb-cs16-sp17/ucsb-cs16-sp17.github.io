@@ -2,7 +2,7 @@
 layout: lab
 num: lab09
 ready: true
-desc: "Mentor evaluation and wrap up"
+desc: "Mentor evaluations and wrap up"
 assigned: 2017-06-06 09:00:00.00-7
 due: 2017-06-06 23:59:00.00-7
 ---
@@ -21,7 +21,7 @@ Here is the link to the survey:
 
 You may use the following document to identify the mentors:
 
-![Tutors](/lab/lab09/Spring2017-mentors/Slide1.png){:height="500px"}
+![Tutors](/lab/lab09/Spring2017-mentors/Slide1.PNG){:height="500px"}
 
 
 </div>
