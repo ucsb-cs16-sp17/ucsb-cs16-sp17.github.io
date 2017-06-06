@@ -21,7 +21,7 @@ Here is the link to the survey:
 
 You may use the following document to identify the mentors:
 
-![new-repo](/lab/lab09/Spring2017-mentors.pdf){:height="500px"}
+![Tutors](/lab/lab09/Spring2017-mentors/Slide1.png){:height="500px"}
 
 
 </div>
