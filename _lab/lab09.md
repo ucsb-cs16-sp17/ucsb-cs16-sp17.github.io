@@ -23,5 +23,6 @@ You may use the following document to identify the mentors:
 
 ![Tutors](/lab/lab09/Spring2017-mentors/Slide1.PNG){:height="500px"}
 
+![TAs](/lab/lab09/Spring2017-mentors/Slide2.PNG){:height="500px"}
 
 </div>
